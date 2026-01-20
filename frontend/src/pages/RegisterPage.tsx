@@ -25,6 +25,7 @@ export default function RegisterPage() {
             setUser(response.data.data.user)
             window.location.href = '/dashboard'
         } catch (err: unknown) {
+            console.error('Registration error details:', err);
             const error = err as { response?: { data?: { message?: string } } }
             setError(error.response?.data?.message || 'Registration failed. Please try again.')
         } finally {
