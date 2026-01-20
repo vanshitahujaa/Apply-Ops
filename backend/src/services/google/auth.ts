@@ -16,12 +16,18 @@ const SCOPES = [
     'https://www.googleapis.com/auth/calendar.events',
 ];
 
-export const getGoogleAuthURL = () => {
-    return oauth2Client.generateAuthUrl({
+export const getGoogleAuthURL = (userId?: string) => {
+    const options: any = {
         access_type: 'offline',
         scope: SCOPES,
         prompt: 'consent', // Ensures we get a refresh token
-    });
+    };
+
+    if (userId) {
+        options.state = JSON.stringify({ userId });
+    }
+
+    return oauth2Client.generateAuthUrl(options);
 };
 
 export const getGoogleUser = async (code: string) => {

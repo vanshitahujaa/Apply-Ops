@@ -150,7 +150,15 @@ router.get(
 );
 
 // Google Auth URL
-router.get('/google/url', (_req, res) => {
+router.get('/google/url', authenticate, (req: AuthRequest, res) => {
+    // If authenticated (via header/cookie), include userId in state for linking
+    const userId = req.user?.id;
+    const url = getGoogleAuthURL(userId);
+    res.json({ success: true, url });
+});
+
+// For public login (no auth needed)
+router.get('/google/url/public', (_req, res) => {
     const url = getGoogleAuthURL();
     res.json({ success: true, url });
 });
@@ -160,19 +168,34 @@ router.get(
     '/google/callback',
     asyncHandler(async (req, res) => {
         const code = req.query.code as string;
+        const state = req.query.state as string;
+
         if (!code) throw new AppError('Code is required', 400);
 
         const { user: googleUser, tokens } = await getGoogleUser(code);
 
         // Check for logged-in user (Link Account flow)
         let userId = null;
-        const token = req.cookies.token;
 
-        if (token) {
+        // 1. Try to get userId from 'state' param (most reliable for cross-site)
+        if (state) {
             try {
-                const decoded = jwt.verify(token, process.env.JWT_SECRET!) as { userId: string };
-                userId = decoded.userId;
-            } catch (e) { }
+                const decodedState = JSON.parse(state);
+                userId = decodedState.userId;
+            } catch (e) {
+                console.error('Failed to parse state:', e);
+            }
+        }
+
+        // 2. Fallback to cookie (if same-site)
+        if (!userId) {
+            const token = req.cookies.token;
+            if (token) {
+                try {
+                    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as { userId: string };
+                    userId = decoded.userId;
+                } catch (e) { }
+            }
         }
 
         if (userId) {
@@ -197,7 +220,7 @@ router.get(
                 }
             });
 
-            res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:3000'}/settings`);
+            res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:3000'}/settings?status=gmail_connected`);
         } else {
             // Login/Register flow
             const email = googleUser.email!;

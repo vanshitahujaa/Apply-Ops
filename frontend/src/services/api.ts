@@ -39,7 +39,7 @@ export const authApi = {
     me: () => api.get<ApiResponse<User>>('/auth/me'),
 
     googleAuth: async () => {
-        const { data } = await api.get('/auth/google/url')
+        const { data } = await api.get('/auth/google/url/public')
         if (data.success) {
             window.location.href = data.url
         }
