@@ -244,7 +244,7 @@ router.get(
             const appToken = createToken(user.id);
             setTokenCookie(res, appToken);
 
-            res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:3000'}/dashboard`);
+            res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:3000'}/auth-callback?token=${appToken}`);
         }
     })
 );
