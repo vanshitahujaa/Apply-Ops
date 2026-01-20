@@ -4,4 +4,4 @@
 npx prisma db push
 
 # Start the application
-exec npm start
+exec node dist/index.js

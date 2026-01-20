@@ -35,6 +35,15 @@ io.on('connection', (socket) => {
     });
 });
 
-httpServer.listen(Number(PORT), '0.0.0.0', () => {
+const server = httpServer.listen(Number(PORT), '0.0.0.0', () => {
     console.log(`🚀 ApplyOps API running on port ${PORT}`);
+});
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+    console.log('👋 SIGTERM received. Shutting down gracefully...');
+    server.close(() => {
+        console.log('💤 HTTP server closed');
+        process.exit(0);
+    });
 });
