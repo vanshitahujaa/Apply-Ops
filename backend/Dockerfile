@@ -21,7 +21,9 @@ COPY . .
 RUN npm run build
 
 # Expose port
-EXPOSE 4000
+# Copy startup script
+COPY start.sh .
+RUN chmod +x start.sh
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["./start.sh"]
