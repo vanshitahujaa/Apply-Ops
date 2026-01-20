@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import axios from 'axios'
 import { useAuthStore } from '@/store'
@@ -8,7 +8,6 @@ export default function AuthCallbackPage() {
     const [searchParams] = useSearchParams()
     const navigate = useNavigate()
     const { setUser } = useAuthStore()
-    const processedRef = useRef(false)
 
     useEffect(() => {
         const token = searchParams.get('token')
