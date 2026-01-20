@@ -24,10 +24,14 @@ export default function RegisterPage() {
             const response = await authApi.register(email, password, name)
             setUser(response.data.data.user)
             window.location.href = '/dashboard'
-        } catch (err: unknown) {
+        } catch (err: any) {
             console.error('Registration error details:', err);
-            const error = err as { response?: { data?: { message?: string } } }
-            setError(error.response?.data?.message || 'Registration failed. Please try again.')
+            const serverUrl = import.meta.env.VITE_API_URL || 'LOCAL fallback';
+            const status = err.response?.status;
+            const data = err.response?.data;
+            const msg = data?.message || err.message;
+
+            setError(`DEBUG: Failed connecting to ${serverUrl}. Status: ${status}. Msg: ${msg} | Raw: ${JSON.stringify(data)}`);
         } finally {
             setIsLoading(false)
         }
