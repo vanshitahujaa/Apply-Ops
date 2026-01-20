@@ -22,6 +22,7 @@ export default function RegisterPage() {
 
         try {
             const response = await authApi.register(email, password, name)
+            localStorage.setItem('token', response.data.data.token)
             setUser(response.data.data.user)
             window.location.href = '/dashboard'
         } catch (err: any) {

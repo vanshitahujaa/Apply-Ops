@@ -21,6 +21,7 @@ export default function LoginPage() {
 
         try {
             const response = await authApi.login(email, password)
+            localStorage.setItem('token', response.data.data.token)
             setUser(response.data.data.user)
             window.location.href = '/dashboard'
         } catch (err: unknown) {
