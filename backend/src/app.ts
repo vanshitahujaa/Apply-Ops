@@ -14,6 +14,14 @@ dotenv.config();
 const app = express();
 
 // Middleware
+app.use((req, res, next) => {
+    console.log(`📨 ${req.method} ${req.path}`, {
+        origin: req.headers.origin,
+        ip: req.ip
+    });
+    next();
+});
+
 app.use(cors({
     origin: [
         process.env.FRONTEND_URL!,
