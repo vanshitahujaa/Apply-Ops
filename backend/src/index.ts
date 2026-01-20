@@ -35,6 +35,6 @@ io.on('connection', (socket) => {
     });
 });
 
-httpServer.listen(PORT, () => {
-    console.log(`🚀 ApplyOps API running on http://localhost:${PORT}`);
+httpServer.listen(Number(PORT), '0.0.0.0', () => {
+    console.log(`🚀 ApplyOps API running on port ${PORT}`);
 });
