@@ -4,4 +4,4 @@
 npx prisma db push
 
 # Start the application
-npm start
+exec npm start
