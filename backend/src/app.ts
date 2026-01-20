@@ -22,6 +22,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Health check
+app.get('/', (_, res) => {
+    res.json({ message: 'ApplyOps API is running 🚀' });
+});
+
 app.get('/health', (_, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
