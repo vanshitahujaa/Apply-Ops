@@ -1,7 +1,7 @@
 import { createServer } from 'http';
 import { Server } from 'socket.io';
-import app from './app.js';
-import { authenticateSocket } from './middleware/auth.js';
+import app from './app';
+import { authenticateSocket } from './middleware/auth';
 
 const PORT = process.env.PORT || 4000;
 

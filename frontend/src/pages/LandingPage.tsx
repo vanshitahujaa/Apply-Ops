@@ -4,14 +4,12 @@ import {
     Mail,
     FileText,
     BarChart3,
-    Zap,
     Shield,
     ArrowRight,
     CheckCircle,
     Sparkles,
     Menu,
     X,
-    Space
 } from 'lucide-react'
 import { useState } from 'react'
 

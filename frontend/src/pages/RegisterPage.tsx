@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Zap, Mail, Lock, User, ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react'
+import { Mail, Lock, User, ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react'
 import { authApi } from '@/services/api'
 import { useAuthStore } from '@/store'
 

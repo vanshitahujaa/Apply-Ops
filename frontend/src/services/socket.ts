@@ -22,12 +22,11 @@ class SocketService {
     public connect() {
         if (this.socket?.connected) return;
 
-        const { token, user } = useAuthStore.getState();
+        const { user } = useAuthStore.getState();
 
-        if (!token || !user) return;
+        if (!user) return;
 
         this.socket = io(SOCKET_URL, {
-            auth: { token },
             withCredentials: true,
             transports: ['websocket', 'polling'], // Fallback to polling if websocket fails
         });

@@ -61,7 +61,7 @@ router.post(
         const content = await generateCoverLetterAI(
             company,
             role,
-            jobDescription,
+            jobDescription || '',
             tone,
             user.name || 'Candidate',
             resumeContent

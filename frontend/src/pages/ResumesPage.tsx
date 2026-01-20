@@ -220,11 +220,11 @@ export default function ResumesPage() {
                                         <div className="flex-1 min-w-0">
                                             <div className="flex flex-wrap items-center gap-2 mb-1">
                                                 <h3 className="font-semibold text-white">{resume.name}</h3>
-                                                <Badge variant={resume.atsScore >= 80 ? 'success' : resume.atsScore >= 60 ? 'warning' : 'danger'}>
-                                                    ATS: {resume.atsScore}%
+                                                <Badge variant={(resume.atsScore || 0) >= 80 ? 'success' : (resume.atsScore || 0) >= 60 ? 'warning' : 'danger'}>
+                                                    ATS: {resume.atsScore || 0}%
                                                 </Badge>
                                             </div>
-                                            <p className="text-sm text-zinc-400">{resume.fileName}</p>
+                                            <p className="text-sm text-zinc-400">{decodeURIComponent(resume.fileUrl.split('/').pop() || 'resume.pdf')}</p>
                                             <div className="flex items-center gap-2 mt-2 text-xs text-zinc-500">
                                                 <Clock className="w-3 h-3" />
                                                 Uploaded {formatRelativeTime(resume.uploadedAt)}
@@ -283,15 +283,15 @@ export default function ResumesPage() {
                                     <div className="mt-4 pt-4 border-t border-zinc-800">
                                         <div className="flex items-center justify-between text-sm mb-2">
                                             <span className="text-zinc-400">ATS Compatibility</span>
-                                            <span className={`font-medium ${resume.atsScore >= 80 ? 'text-emerald-400' : resume.atsScore >= 60 ? 'text-amber-400' : 'text-red-400'}`}>
-                                                {resume.atsScore}%
+                                            <span className={`font-medium ${(resume.atsScore || 0) >= 80 ? 'text-emerald-400' : (resume.atsScore || 0) >= 60 ? 'text-amber-400' : 'text-red-400'}`}>
+                                                {resume.atsScore || 0}%
                                             </span>
                                         </div>
                                         <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                                             <div
-                                                className={`h-full rounded-full transition-all ${resume.atsScore >= 80 ? 'bg-emerald-500' : resume.atsScore >= 60 ? 'bg-amber-500' : 'bg-red-500'
+                                                className={`h-full rounded-full transition-all ${(resume.atsScore || 0) >= 80 ? 'bg-emerald-500' : (resume.atsScore || 0) >= 60 ? 'bg-amber-500' : 'bg-red-500'
                                                     }`}
-                                                style={{ width: `${resume.atsScore}%` }}
+                                                style={{ width: `${resume.atsScore || 0}%` }}
                                             />
                                         </div>
                                     </div>

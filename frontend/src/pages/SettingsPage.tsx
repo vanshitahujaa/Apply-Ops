@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import { useState } from 'react'
 import { useAuthStore } from '@/store'
+import { authApi } from '@/services/api'
 import type { User } from '@/lib/types'
 
 export default function SettingsPage() {

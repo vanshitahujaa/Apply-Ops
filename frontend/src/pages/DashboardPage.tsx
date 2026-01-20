@@ -11,7 +11,6 @@ import { applicationsApi, authApi } from '@/services/api'
 import axios from 'axios'
 import { toast } from 'sonner'
 import {
-  Zap,
   Plus,
   Search,
   Briefcase,
@@ -33,7 +32,6 @@ import {
   PenTool,
   RefreshCw,
   ExternalLink,
-  Clock as ClockIcon,
   Edit3,
   Trash2
 } from 'lucide-react'
@@ -47,56 +45,7 @@ const statusConfig: Record<ApplicationStatus, { label: string; variant: 'default
   withdrawn: { label: 'Withdrawn', variant: 'secondary', icon: XCircle },
 }
 
-// Mock data
-const mockApplications: Application[] = [
-  {
-    id: '1',
-    company: 'Google',
-    role: 'Senior Software Engineer',
-    status: 'interviewing',
-    platform: 'LinkedIn',
-    appliedAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
-    updatedAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
-    interviewAt: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString(),
-  },
-  {
-    id: '2',
-    company: 'Meta',
-    role: 'Full Stack Developer',
-    status: 'applied',
-    platform: 'Company Website',
-    appliedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
-    updatedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
-  },
-  {
-    id: '3',
-    company: 'Stripe',
-    role: 'Backend Engineer',
-    status: 'offered',
-    platform: 'Referral',
-    appliedAt: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString(),
-    updatedAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
-    salary: '₹35L - ₹45L',
-  },
-  {
-    id: '4',
-    company: 'Notion',
-    role: 'Frontend Engineer',
-    status: 'rejected',
-    platform: 'AngelList',
-    appliedAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(),
-    updatedAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
-  },
-  {
-    id: '5',
-    company: 'Vercel',
-    role: 'Software Engineer',
-    status: 'viewed',
-    platform: 'LinkedIn',
-    appliedAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
-    updatedAt: new Date().toISOString(),
-  },
-]
+// Mock data removed
 
 export default function DashboardPage() {
   const { user, logout } = useAuthStore()
@@ -523,9 +472,9 @@ export default function DashboardPage() {
                   <select
                     value={selectedApplication.status}
                     onChange={async (e) => {
-                      const newStatus = e.target.value as any
+                      const newStatus = e.target.value as ApplicationStatus
                       try {
-                        await applicationsApi.update(selectedApplication.id, { status: newStatus.toUpperCase() })
+                        await applicationsApi.update(selectedApplication.id, { status: newStatus.toUpperCase() as ApplicationStatus })
                         toast.success(`Status updated to ${statusConfig[newStatus].label}`)
                         setSelectedApplication(prev => prev ? { ...prev, status: newStatus } : null)
                         await fetchApplications()
@@ -750,10 +699,10 @@ function SidebarContent({
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <Link to="/" className="flex items-center gap-2.5 relative h-10 w-40 overflow-hidden shrink-0">
-          <img 
-            src="/logo.png" 
-            alt="ApplyOps" 
-            className="absolute top-1/2 left-0 -translate-y-1/2 h-24 w-auto max-w-none object-contain" 
+          <img
+            src="/logo.png"
+            alt="ApplyOps"
+            className="absolute top-1/2 left-0 -translate-y-1/2 h-24 w-auto max-w-none object-contain"
           />
         </Link>
         {onClose && (
