@@ -2,12 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
-import authRoutes from './routes/auth.js';
-import applicationRoutes from './routes/applications.js';
-import resumeRoutes from './routes/resumes.js';
-import coverLetterRoutes from './routes/coverLetters.js';
-import analyticsRoutes from './routes/analytics.js';
-import { errorHandler } from './middleware/errorHandler.js';
+import authRoutes from './routes/auth';
+import applicationRoutes from './routes/applications';
+import resumeRoutes from './routes/resumes';
+import coverLetterRoutes from './routes/coverLetters';
+import analyticsRoutes from './routes/analytics';
+import { errorHandler } from './middleware/errorHandler';
 
 dotenv.config();
 
