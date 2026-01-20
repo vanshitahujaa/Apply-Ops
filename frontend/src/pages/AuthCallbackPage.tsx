@@ -18,8 +18,9 @@ export default function AuthCallbackPage() {
             // We need to fetch the user usage now or just decode it. 
             // Better to just fetch 'me' to be safe and get full user object.
             // But for now, let's assume valid and fetch user.
-            axios.get('/api/auth/me', { headers: { Authorization: `Bearer ${token}` } }) // Or rely on cookie
+            axios.get('/api/auth/me', { headers: { Authorization: `Bearer ${token}` } })
                 .then(res => {
+                    localStorage.setItem('token', token)
                     setUser(res.data.data)
                     navigate('/dashboard')
                 })

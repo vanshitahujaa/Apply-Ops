@@ -17,6 +17,15 @@ const api = axios.create({
     withCredentials: true,
 })
 
+// Add request interceptor to inject token
+api.interceptors.request.use((config) => {
+    const token = localStorage.getItem('token')
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`
+    }
+    return config
+})
+
 // Auth API
 export const authApi = {
     login: (email: string, password: string) =>
