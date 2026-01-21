@@ -149,17 +149,17 @@ router.get(
     })
 );
 
+// For public login (no auth needed)
+router.get('/google/url/public', (_req, res) => {
+    const url = getGoogleAuthURL();
+    res.json({ success: true, url });
+});
+
 // Google Auth URL
 router.get('/google/url', authenticate, (req: AuthRequest, res) => {
     // If authenticated (via header/cookie), include userId in state for linking
     const userId = req.user?.id;
     const url = getGoogleAuthURL(userId);
-    res.json({ success: true, url });
-});
-
-// For public login (no auth needed)
-router.get('/google/url/public', (_req, res) => {
-    const url = getGoogleAuthURL();
     res.json({ success: true, url });
 });
 
