@@ -21,7 +21,7 @@ import {
     AlertTriangle,
     PenTool,
 } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAuthStore } from '@/store'
 import { authApi } from '@/services/api'
 import type { User } from '@/lib/types'
@@ -32,6 +32,14 @@ export default function SettingsPage() {
     const [name, setName] = useState(user?.name || '')
     const [email, setEmail] = useState(user?.email || '')
     const { setUser: updateAuthUser } = useAuthStore()
+
+    // Sync local state with global user state
+    useEffect(() => {
+        if (user) {
+            setName(user.name || '')
+            setEmail(user.email || '')
+        }
+    }, [user])
 
     const handleSaveProfile = async () => {
         try {
