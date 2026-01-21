@@ -38,6 +38,8 @@ export const authApi = {
 
     me: () => api.get<ApiResponse<User>>('/auth/me'),
 
+    updateProfile: (data: Partial<User>) => api.patch<ApiResponse<User>>('/auth/me', data),
+
     googleAuth: async () => {
         const { data } = await api.get('/auth/google/url/public')
         if (data.success) {

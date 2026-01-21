@@ -32,6 +32,20 @@ export default function SettingsPage() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [name, setName] = useState(user?.name || '')
     const [email, setEmail] = useState(user?.email || '')
+    const { setUser: updateAuthUser } = useAuthStore()
+
+    const handleSaveProfile = async () => {
+        try {
+            const { data } = await authApi.updateProfile({ name, email })
+            if (data.success) {
+                updateAuthUser(data.data)
+                alert('Profile updated successfully')
+            }
+        } catch (error) {
+            console.error('Failed to update profile', error)
+            alert('Failed to update profile')
+        }
+    }
 
     const handleConnectGmail = async () => {
         try {
@@ -167,7 +181,7 @@ export default function SettingsPage() {
                                         />
                                     </div>
                                 </div>
-                                <Button variant="gradient" className="mt-4">
+                                <Button variant="gradient" className="mt-4" onClick={handleSaveProfile}>
                                     Save Changes
                                 </Button>
                             </CardContent>
@@ -208,41 +222,6 @@ export default function SettingsPage() {
                                         </Button>
                                     </div>
                                 )}
-                            </CardContent>
-                        </Card>
-
-                        {/* Notifications */}
-                        <Card>
-                            <CardHeader>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
-                                        <Bell className="w-5 h-5 text-amber-400" />
-                                    </div>
-                                    <div>
-                                        <CardTitle className="text-base">Notifications</CardTitle>
-                                        <CardDescription>How you receive updates</CardDescription>
-                                    </div>
-                                </div>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="space-y-4">
-                                    {[
-                                        { label: 'Application status updates', description: 'When a company views your application' },
-                                        { label: 'Interview reminders', description: '24 hours before scheduled interviews' },
-                                        { label: 'Weekly summary', description: 'Your job search performance report' },
-                                    ].map((item, i) => (
-                                        <div key={i} className="flex items-start justify-between gap-4">
-                                            <div>
-                                                <p className="text-sm text-zinc-200">{item.label}</p>
-                                                <p className="text-xs text-zinc-500">{item.description}</p>
-                                            </div>
-                                            <label className="relative inline-flex items-center cursor-pointer">
-                                                <input type="checkbox" defaultChecked className="sr-only peer" />
-                                                <div className="w-11 h-6 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-violet-600"></div>
-                                            </label>
-                                        </div>
-                                    ))}
-                                </div>
                             </CardContent>
                         </Card>
 

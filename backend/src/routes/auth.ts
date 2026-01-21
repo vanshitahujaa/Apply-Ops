@@ -147,7 +147,37 @@ router.get(
             },
         });
     })
-);
+// Update current user
+router.patch(
+        '/me',
+        authenticate,
+        asyncHandler(async (req: AuthRequest, res) => {
+            const { name, email } = req.body;
+
+            // Validation could go here...
+
+            const user = await prisma.user.update({
+                where: { id: req.user!.id },
+                data: { name, email },
+                select: {
+                    id: true,
+                    email: true,
+                    name: true,
+                    avatarUrl: true,
+                    createdAt: true,
+                    gmailToken: { select: { id: true, filterActive: true } }
+                }
+            });
+
+            res.json({
+                success: true,
+                data: {
+                    ...user,
+                    gmailConnected: !!user.gmailToken
+                }
+            });
+        })
+    );
 
 // For public login (no auth needed)
 router.get('/google/url/public', (_req, res) => {
