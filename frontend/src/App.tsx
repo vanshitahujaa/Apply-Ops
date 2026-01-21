@@ -59,6 +59,9 @@ function App() {
 
   useEffect(() => {
     const initAuth = async () => {
+      // Skip auth check on callback page to avoid race condition with token setting
+      if (window.location.pathname.startsWith('/auth/callback')) return
+
       try {
         const { data } = await authApi.me()
         if (data.success) {
