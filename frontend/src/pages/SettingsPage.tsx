@@ -13,7 +13,6 @@ import {
     LogOut,
     Mail,
     User as UserIcon,
-    Bell,
     Shield,
     Trash2,
     Menu,
