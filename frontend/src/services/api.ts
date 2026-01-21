@@ -9,8 +9,13 @@ import type {
     PaginatedResponse
 } from '@/lib/types'
 
+// Use Render backend directly to avoid Vercel proxy stripping Authorization headers
+const API_BASE_URL = import.meta.env.PROD
+    ? 'https://applyops-backend-latest.onrender.com/api'
+    : '/api'
+
 const api = axios.create({
-    baseURL: '/api',
+    baseURL: API_BASE_URL,
     headers: {
         'Content-Type': 'application/json',
     },
