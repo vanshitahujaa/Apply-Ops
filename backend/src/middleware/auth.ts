@@ -21,12 +21,15 @@ export const authenticate = async (
     try {
         // Get token from cookie or Authorization header
         let token = req.cookies?.token;
+        let source = 'cookie';
 
         if (!token && req.headers.authorization?.startsWith('Bearer ')) {
             token = req.headers.authorization.split(' ')[1];
+            source = 'header';
         }
 
         if (!token) {
+            console.log('🔴 Auth Failed: No token found in cookie or header');
             throw new AppError('Authentication required', 401);
         }
 
@@ -42,6 +45,7 @@ export const authenticate = async (
         });
 
         if (!user) {
+            console.log(`🔴 Auth Failed: User ${decoded.userId} not found`);
             throw new AppError('User not found', 401);
         }
 
@@ -53,8 +57,10 @@ export const authenticate = async (
         next();
     } catch (error) {
         if (error instanceof jwt.JsonWebTokenError) {
+            console.log('🔴 Auth Failed: Invalid Token:', error.message);
             next(new AppError('Invalid token', 401));
         } else {
+            console.log('🔴 Auth Failed: Unknown Error:', error);
             next(error);
         }
     }
