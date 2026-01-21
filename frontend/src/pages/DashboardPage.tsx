@@ -7,8 +7,7 @@ import { Input } from '@/components/ui/input'
 import { useApplicationStore, useAuthStore } from '@/store'
 import type { Application, ApplicationStatus, User } from '@/lib/types'
 import { formatRelativeTime } from '@/lib/utils'
-import { applicationsApi, authApi } from '@/services/api'
-import axios from 'axios'
+import api, { applicationsApi, authApi } from '@/services/api'
 import { toast } from 'sonner'
 import {
   Plus,
@@ -123,7 +122,7 @@ export default function DashboardPage() {
     setIsSyncing(true)
     const toastId = toast.loading('Syncing with Gmail...')
     try {
-      const { data } = await axios.post('/api/applications/sync')
+      const { data } = await api.post('/applications/sync')
       await fetchApplications()
       if (data.count === 0) {
         toast.info('Sync complete: No new applications found', { id: toastId })

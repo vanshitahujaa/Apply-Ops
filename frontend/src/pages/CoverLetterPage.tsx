@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import axios from 'axios'
-import { authApi } from '@/services/api'
+import api, { authApi } from '@/services/api'
 import jsPDF from 'jspdf'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
@@ -60,7 +59,7 @@ export default function CoverLetterPage() {
         setStep('generating')
 
         try {
-            const response = await axios.post('/api/cover-letters/generate', {
+            const response = await api.post('/cover-letters/generate', {
                 company: companyName,
                 role: roleName,
                 jobDescription,

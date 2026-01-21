@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import api from '@/services/api'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -56,7 +56,7 @@ export default function SettingsPage() {
 
     const handleConnectGmail = async () => {
         try {
-            const response = await axios.get('/api/auth/google/url')
+            const response = await api.get('/auth/google/url')
             if (response.data.success) {
                 window.location.href = response.data.url
             }
@@ -67,7 +67,7 @@ export default function SettingsPage() {
 
     const handleDisconnectGmail = async () => {
         try {
-            await axios.post('/api/auth/gmail/disconnect')
+            await api.post('/auth/gmail/disconnect')
             window.location.reload()
         } catch (error) {
             console.error('Failed to disconnect Gmail', error)
@@ -76,7 +76,7 @@ export default function SettingsPage() {
 
     const handleExportData = async () => {
         try {
-            const response = await axios.get('/api/auth/export', { responseType: 'blob' })
+            const response = await api.get('/auth/export', { responseType: 'blob' })
             const url = window.URL.createObjectURL(new Blob([response.data]))
             const link = document.createElement('a')
             link.href = url
@@ -92,7 +92,7 @@ export default function SettingsPage() {
     const handleDeleteAccount = async () => {
         if (!confirm('Are you sure you want to delete your account? This cannot be undone.')) return
         try {
-            await axios.delete('/api/auth/me')
+            await api.delete('/auth/me')
             logout()
             window.location.href = '/'
         } catch (error) {
