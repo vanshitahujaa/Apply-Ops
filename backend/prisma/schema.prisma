@@ -59,10 +59,29 @@ model Application {
 
   user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
   coverLetters CoverLetter[]
+  rounds       InterviewRound[]
 
   @@index([userId])
   @@index([status])
 }
+
+model InterviewRound {
+  id              String   @id @default(cuid())
+  applicationId   String
+  roundName       String   // e.g. "Technical Round 1", "HR Round"
+  scheduledAt     DateTime
+  status          String   @default("SCHEDULED") // SCHEDULED, COMPLETED, CANCELLED
+  calendarEventId String?
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  application Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+  @@index([applicationId])
+}
+
+
 
 enum ApplicationStatus {
   APPLIED

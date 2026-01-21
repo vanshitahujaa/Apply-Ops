@@ -69,8 +69,13 @@ router.post(
             const dataBuffer = fs.readFileSync(req.file.path);
             const data = await pdf(dataBuffer);
             content = data.text;
-        } catch (error) {
+            
+            if (!content || content.trim().length === 0) {
+                 throw new Error('PDF content is empty (scanned image?)');
+            }
+        } catch (error: any) {
             console.error('Failed to parse PDF', error);
+            throw new AppError('Failed to extract text from PDF. Please ensure it is a text-based PDF, not an image.', 400);
         }
 
         const resume = await prisma.resume.create({
@@ -107,7 +112,11 @@ router.post(
         }
 
         // AI Analysis using Gemini
-        const result = await analyzeResumeAI((resume.content || ''), jobDescription);
+        if (!resume.content || resume.content.length < 50) {
+            throw new AppError('Resume content is empty or too short. Please re-upload.', 400);
+        }
+
+        const result = await analyzeResumeAI(resume.content, jobDescription);
 
         // Update ATS score and feedback
         const updatedResume = await prisma.resume.update({

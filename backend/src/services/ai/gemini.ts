@@ -18,17 +18,20 @@ export const analyzeEmailAI = async (
 ): Promise<{
     company: string;
     role: string;
-    status: string;
+    status: string; // APPLIED | INTERVIEW | REJECTED | OFFER
+    round?: string; // e.g. "Technical Round", "Coding Assessment", "HR Round"
     confidence: number;
     interviewDate?: string | null;
     location?: string | null;
     salary?: string | null;
     platform?: string | null;
+    notes?: string;
 } | null> => {
     if (!process.env.GEMINI_API_KEY) return null;
 
     const quick = (subject + emailBody).toLowerCase();
-    if (!quick.match(/apply|interview|offer|unfortunately|assessment|moving forward/))
+    // Optimized Keywords for quick filter
+    if (!quick.match(/application|interview|offer|unfortunately|assessment|moving forward|schedule|round|coding|technical|joining|feedback/))
         return null;
 
     try {
@@ -36,29 +39,33 @@ export const analyzeEmailAI = async (
         const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
         const prompt = `
-Return ONLY valid JSON.
+Analyze this job-related email. Return JSON ONLY.
 
-If NOT a job application update:
-{ "isJobEmail": false }
+Context:
+- Detect the Company and Role.
+- Detect the Status: APPLIED, INTERVIEW, REJECTED, OFFER.
+- Detect the Round: "Screening", "Technical Round", "Coding Assessment", "System Design", "Managerial", "HR", "Final Round", "Offer Letter", "Joining Letter".
+- Extract EXACT Interview Date/Time (ISO format) if present.
 
-If YES:
+Input:
+Sender: ${sender}
+Subject: ${subject}
+Body: ${emailBody.substring(0, 3000)}
+
+Output Structure:
 {
-  "isJobEmail": true,
+  "isJobEmail": boolean,
   "company": "string",
   "role": "string",
   "status": "APPLIED | INTERVIEW | REJECTED | OFFER",
-  "confidence": 0.0-1.0,
-  "interviewDate": "ISO date or null",
+  "round": "string or null",
+  "confidence": number (0.0-1.0),
+  "interviewDate": "ISO date string or null",
   "location": "string or null",
   "salary": "string or null",
-  "platform": "string or null"
+  "platform": "string or null",
+  "summary": "Brief 1-sentence summary of the update"
 }
-
-Do NOT guess. If unsure, set isJobEmail=false.
-
-Sender: ${sender}
-Subject: ${subject}
-Body: ${emailBody.substring(0, 2000)}
 `;
 
         const result = await model.generateContent(prompt);
@@ -71,47 +78,30 @@ Body: ${emailBody.substring(0, 2000)}
             company: data.company,
             role: data.role || 'Unknown Role',
             status: data.status,
+            round: data.round || null,
             confidence: data.confidence || 0.8,
             interviewDate: data.interviewDate || null,
             location: data.location || null,
             salary: data.salary || null,
-            platform: data.platform || null
+            platform: data.platform || null,
+            notes: data.summary // Save summary as notes
         };
 
     } catch (e: any) {
         console.error('AI Email Analysis Failed', e);
-
-        // Auto-fallback if Rate Limited (429)
-        if (e.message?.includes('429') || e.message?.includes('Quota')) {
-            console.warn('Gemini 429 Hit. Using Regex Fallback.');
-            const lowerSub = subject.toLowerCase();
-
-            if (lowerSub.match(/application|applied|interview|offer|rejected|update|assessment|thank you/)) {
-                let status = 'APPLIED';
-                if (lowerSub.includes('interview')) status = 'INTERVIEW';
-                if (lowerSub.includes('offer')) status = 'OFFER';
-                if (lowerSub.includes('rejected')) status = 'REJECTED';
-
-                let company = sender.split('<')[0].replace(/"/g, '').trim();
-                if (!company || company.toLowerCase().includes('me')) company = 'Pending Company';
-
-                return {
-                    company,
-                    role: 'Software Engineer', // Default
-                    status,
-                    confidence: 0.5, // Low confidence for regex
-                    interviewDate: null,
-                    location: null,
-                    salary: null,
-                    platform: 'Gmail Import (Fallback)'
-                };
-            }
-        }
         return null;
     }
 };
 
 // ---------- Resume ATS Analyzer ----------
+
+// Utility to clean text and save tokens
+const cleanText = (text: string): string => {
+    return text
+        .replace(/\s+/g, ' ') // Collapse whitespace
+        .replace(/[^\w\s.,@%-]/g, '') // Remove weird chars
+        .trim();
+};
 
 export const analyzeResumeAI = async (
     resumeContent: string,
@@ -125,40 +115,65 @@ export const analyzeResumeAI = async (
 }> => {
     try {
         const genAI = getGenAI();
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        const model = genAI.getGenerativeModel({ 
+            model: "gemini-2.0-flash",
+            generationConfig: { temperature: 0.2 } // Low temp for consistent scoring
+        });
+
+        const cleanResume = cleanText(resumeContent);
+        const cleanJD = cleanText(jobDescription);
 
         const prompt = `
-You are an ATS scanner.
+You are an advanced ATS (Applicant Tracking System) & Expert Career Coach. 
+Your goal is to parse the Resume and Job Description (JD) to calculate a match score and provide actionable optimization feedback.
 
-Return JSON:
+### Scoring Logic (0-100):
+1. **Hard Skills Match (40%)**: Do they have the required programming languages/frameworks?
+2. **Experience Relevance (30%)**: Do they have similar titles/responsibilities?
+3. **Impact/Metrics (20%)**: Do they use numbers (%, $, +) to quantify achievements?
+4. **Soft Skills/Culture (10%)**: Do they mention key soft skills?
+
+### Task:
+Analyze the text below. Be STRICT. If a critical hard skill (like "React" or "AWS") is in the JD but missing in the Resume, DEDUCT POINTS heavily.
+
+### Input Data
+**Job Description:**
+${cleanJD.substring(0, 10000)}
+
+**Resume Content:**
+${cleanResume.substring(0, 20000)}
+
+### Output Format (JSON ONLY):
 {
-  "score": number,
-  "missingHardSkills": [],
-  "missingTools": [],
-  "sectionSuggestions": [],
-  "bulletImprovements": []
+  "score": number, // Calculated based on logic above
+  "missingHardSkills": ["List ONLY technical skills found in JD but completely missing in Resume"],
+  "missingTools": ["List ONLY tools/platforms (Jira, AWS, Docker) found in JD but missing"],
+  "sectionSuggestions": [
+     "Specific advice 1 (e.g., 'Add a Summary section focusing on X')",
+     "Specific advice 2 (e.g., 'Move Education below Experience')"
+  ],
+  "bulletImprovements": [
+     "Original: [Quote weak bullet]",
+     "Improved: [Rewrite using Action Verb + Task + Result/Metric]"
+  ]
 }
 
-Resume:
-${resumeContent.substring(0, 5000)}
-
-Job Description:
-${jobDescription.substring(0, 2000)}
+Return ONLY valid JSON.
 `;
 
         const result = await model.generateContent(prompt);
         const text = result.response.text().replace(/```json|```/g, '').trim();
-        return JSON.parse(text);
+        
+        try {
+            return JSON.parse(text);
+        } catch (e) {
+            console.error('Failed to parse AI JSON:', text);
+            throw new Error('Invalid AI Response Format');
+        }
 
     } catch (error: any) {
         console.error('Resume Analysis Error:', error);
-        return {
-            score: 80,
-            missingHardSkills: ["Docker", "System Design"],
-            missingTools: ["AWS"],
-            sectionSuggestions: ["Add scalable system projects"],
-            bulletImprovements: ["Use quantified achievements"]
-        };
+        throw new AppError('AI Analysis Failed: ' + (error.message || 'Unknown error'), 500);
     }
 };
 

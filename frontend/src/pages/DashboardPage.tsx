@@ -517,169 +517,175 @@ export default function DashboardPage() {
               )}
 
               <div className="pt-4 border-t border-zinc-800 space-y-3">
-                {/* Edit Interview Date */}
-                {isEditingInterview ? (
-                  <div className="space-y-3">
-                    <div>
-                      <label className="text-xs text-zinc-500 mb-1 block">Interview Date & Time</label>
-                      <input
-                        type="datetime-local"
-                        value={editInterviewDate}
-                        onChange={(e) => setEditInterviewDate(e.target.value)}
-                        className="w-full h-10 px-3 rounded-xl bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
-                      />
-                    </div>
-                    <div className="flex gap-2">
-                      <Button variant="ghost" size="sm" className="flex-1" onClick={() => setIsEditingInterview(false)}>
-                        Cancel
-                      </Button>
-                      <Button variant="gradient" size="sm" className="flex-1" onClick={handleSaveInterview}>
-                        Save Interview
-                      </Button>
-                    </div>
-                  </div>
-                ) : (
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={() => {
-                      setEditInterviewDate(selectedApplication?.interviewAt ? new Date(selectedApplication.interviewAt).toISOString().slice(0, 16) : '')
-                      setIsEditingInterview(true)
-                    }}
-                  >
-                    <Edit3 className="w-4 h-4 mr-2" />
-                    {selectedApplication?.interviewAt ? 'Edit Interview Date' : 'Add Interview Date'}
-                  </Button>
+              </div>
+              ) : (
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={() => {
+                  setEditInterviewDate(selectedApplication?.interviewAt ? new Date(selectedApplication.interviewAt).toISOString().slice(0, 16) : '')
+                  setIsEditingInterview(true)
+                }}
+              >
+                <Edit3 className="w-4 h-4 mr-2" />
+                {selectedApplication?.interviewAt ? 'Edit Interview Date' : 'Add Interview Date'}
+              </Button>
                 )}
 
-                <a
-                  href={selectedApplication.url || `https://mail.google.com/mail/u/0/#search/${selectedApplication.company}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center w-full gap-2 p-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium transition-colors"
-                >
-                  <Mail className="w-4 h-4" />
-                  View Original Email
-                  <ExternalLink className="w-3 h-3 opacity-50" />
-                </a>
+              {/* Interview Rounds Timeline */}
+              {selectedApplication.rounds && selectedApplication.rounds.length > 0 && (
+                <div className="pt-4 border-t border-zinc-800">
+                  <h4 className="text-sm font-semibold text-white mb-3">Interview Progression</h4>
+                  <div className="relative space-y-4 pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-px before:bg-zinc-800">
+                    {selectedApplication.rounds.map((round) => (
+                      <div key={round.id} className="relative">
+                        <div className="absolute -left-4 top-1.5 w-3 h-3 rounded-full bg-violet-500 ring-4 ring-zinc-900" />
+                        <div>
+                          <p className="text-sm font-medium text-white">{round.roundName}</p>
+                          <p className="text-xs text-zinc-400">
+                            {new Date(round.scheduledAt).toLocaleString(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}
+                          </p>
+                          {round.notes && (
+                            <p className="text-xs text-zinc-500 mt-1 italic">"{round.notes}"</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-                <Button
-                  variant="ghost"
-                  className="w-full text-red-400 hover:text-red-300 hover:bg-red-500/10"
-                  onClick={() => handleDeleteApplication(selectedApplication.id)}
-                >
-                  <Trash2 className="w-4 h-4 mr-2" />
-                  Delete Application
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {/* Add Application Modal */}
-      {showAddModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="w-full max-w-md bg-zinc-900 border border-zinc-800 rounded-2xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-            <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
-              <h3 className="font-semibold text-white">Add Application</h3>
-              <button
-                onClick={() => setShowAddModal(false)}
-                className="p-1 text-zinc-500 hover:text-white transition-colors"
+              <a
+                href={selectedApplication.url || `https://mail.google.com/mail/u/0/#search/${selectedApplication.company}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center w-full gap-2 p-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium transition-colors"
               >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
+                <Mail className="w-4 h-4" />
+                View Original Email
+                <ExternalLink className="w-3 h-3 opacity-50" />
+              </a>
 
-            <div className="p-4 space-y-4">
-              <div>
-                <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
-                  Company Name <span className="text-red-400">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Google"
-                  value={newApp.company}
-                  onChange={(e) => setNewApp({ ...newApp, company: e.target.value })}
-                  className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 placeholder:text-zinc-600"
-                />
-              </div>
-
-              <div>
-                <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
-                  Role / Position <span className="text-red-400">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Senior Software Engineer"
-                  value={newApp.role}
-                  onChange={(e) => setNewApp({ ...newApp, role: e.target.value })}
-                  className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 placeholder:text-zinc-600"
-                />
-              </div>
-
-              <div>
-                <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
-                  Job URL (Optional)
-                </label>
-                <input
-                  type="url"
-                  placeholder="e.g. https://linkedin.com/jobs/..."
-                  value={newApp.url}
-                  onChange={(e) => setNewApp({ ...newApp, url: e.target.value })}
-                  className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 placeholder:text-zinc-600"
-                />
-              </div>
-
-              <div>
-                <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
-                  Platform
-                </label>
-                <select
-                  value={newApp.platform}
-                  onChange={(e) => setNewApp({ ...newApp, platform: e.target.value })}
-                  className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 cursor-pointer"
-                >
-                  <option value="LinkedIn">LinkedIn</option>
-                  <option value="Indeed">Indeed</option>
-                  <option value="Glassdoor">Glassdoor</option>
-                  <option value="Wellfound">Wellfound</option>
-                  <option value="Company Website">Company Website</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
-              <div className="pt-2 flex gap-3">
-                <Button
-                  variant="ghost"
-                  className="flex-1"
-                  onClick={() => setShowAddModal(false)}
-                >
-                  Cancel
-                </Button>
-                <Button
-                  variant="gradient"
-                  className="flex-1"
-                  onClick={handleAddApplication}
-                  disabled={isAddingApp}
-                >
-                  {isAddingApp ? (
-                    <>
-                      <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
-                      Adding...
-                    </>
-                  ) : (
-                    <>
-                      <Plus className="w-4 h-4 mr-2" />
-                      Add App
-                    </>
-                  )}
-                </Button>
-              </div>
+              <Button
+                variant="ghost"
+                className="w-full text-red-400 hover:text-red-300 hover:bg-red-500/10"
+                onClick={() => handleDeleteApplication(selectedApplication.id)}
+              >
+                <Trash2 className="w-4 h-4 mr-2" />
+                Delete Application
+              </Button>
             </div>
           </div>
         </div>
-      )}
+        </div>
+  )
+}
+{/* Add Application Modal */ }
+{
+  showAddModal && (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+      <div className="w-full max-w-md bg-zinc-900 border border-zinc-800 rounded-2xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
+          <h3 className="font-semibold text-white">Add Application</h3>
+          <button
+            onClick={() => setShowAddModal(false)}
+            className="p-1 text-zinc-500 hover:text-white transition-colors"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="p-4 space-y-4">
+          <div>
+            <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
+              Company Name <span className="text-red-400">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="e.g. Google"
+              value={newApp.company}
+              onChange={(e) => setNewApp({ ...newApp, company: e.target.value })}
+              className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 placeholder:text-zinc-600"
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
+              Role / Position <span className="text-red-400">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="e.g. Senior Software Engineer"
+              value={newApp.role}
+              onChange={(e) => setNewApp({ ...newApp, role: e.target.value })}
+              className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 placeholder:text-zinc-600"
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
+              Job URL (Optional)
+            </label>
+            <input
+              type="url"
+              placeholder="e.g. https://linkedin.com/jobs/..."
+              value={newApp.url}
+              onChange={(e) => setNewApp({ ...newApp, url: e.target.value })}
+              className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 placeholder:text-zinc-600"
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-medium text-zinc-400 mb-1.5 block">
+              Platform
+            </label>
+            <select
+              value={newApp.platform}
+              onChange={(e) => setNewApp({ ...newApp, platform: e.target.value })}
+              className="w-full h-10 px-3 rounded-lg bg-zinc-800 border border-zinc-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 cursor-pointer"
+            >
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Indeed">Indeed</option>
+              <option value="Glassdoor">Glassdoor</option>
+              <option value="Wellfound">Wellfound</option>
+              <option value="Company Website">Company Website</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div className="pt-2 flex gap-3">
+            <Button
+              variant="ghost"
+              className="flex-1"
+              onClick={() => setShowAddModal(false)}
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="gradient"
+              className="flex-1"
+              onClick={handleAddApplication}
+              disabled={isAddingApp}
+            >
+              {isAddingApp ? (
+                <>
+                  <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+                  Adding...
+                </>
+              ) : (
+                <>
+                  <Plus className="w-4 h-4 mr-2" />
+                  Add App
+                </>
+              )}
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
+  )
+}
+    </div >
   )
 }
 

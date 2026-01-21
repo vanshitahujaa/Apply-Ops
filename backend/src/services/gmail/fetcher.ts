@@ -1,6 +1,7 @@
 import { google } from 'googleapis';
 import { PrismaClient } from '@prisma/client';
 import { createGmailClient } from '../google/auth.js';
+import { createInterviewEvent } from '../google/calendar.js';
 import { analyzeEmailAI } from '../ai/gemini.js';
 
 const prisma = new PrismaClient();
@@ -124,27 +125,63 @@ export const fetchAndProcessEmails = async (userId: string) => {
 
       const newStatus =
         result.status === 'INTERVIEW' ? 'INTERVIEWING' :
-        result.status === 'OFFER' ? 'OFFERED' :
-        result.status === 'REJECTED' ? 'REJECTED' :
-        'APPLIED';
+          result.status === 'OFFER' ? 'OFFERED' :
+            result.status === 'REJECTED' ? 'REJECTED' :
+              'APPLIED';
 
+      // Smart Upsert Logic
       const existing = await prisma.application.findFirst({
         where: { userId, company: { contains: result.company, mode: 'insensitive' } }
       });
 
       if (existing) {
-        if (statusPriority[newStatus] > statusPriority[existing.status]) {
+        // ALWAYS update if we have new info, especially for Interviews/Offers or new "Rounds"
+        const isStatusUpgrade = statusPriority[newStatus] >= statusPriority[existing.status];
+        const hasClickableDate = !!result.interviewDate;
+
+        // Append to notes for "Round History"
+        const existingNotes = existing.notes || '';
+        const newNote = result.notes ? `\n[${new Date().toLocaleDateString()}] ${result.round || 'Update'}: ${result.notes}` : '';
+
+        let calendarEventId = existing.calendarEventId;
+
+        // Auto-Schedule Interview
+        if (newStatus === 'INTERVIEWING' && result.interviewDate && !existing.calendarEventId) {
+          const event = await createInterviewEvent(userId, {
+            company: existing.company,
+            role: existing.role,
+            interviewAt: new Date(result.interviewDate),
+            notes: result.notes
+          });
+          if (event) calendarEventId = event.eventId;
+        }
+
+        if (isStatusUpgrade || hasClickableDate) {
           await prisma.application.update({
             where: { id: existing.id },
             data: {
               status: newStatus as any,
               interviewAt: result.interviewDate ? new Date(result.interviewDate) : existing.interviewAt,
-              updatedAt: new Date(),
-              emailId: msg.id
+              updatedAt: new Date(), // Bump to top
+              notes: existingNotes + newNote,
+              calendarEventId
             }
           });
+          console.log(`✅ Updated Application: ${existing.company} (${newStatus})`);
         }
       } else {
+        // Create New
+        let calendarEventId: string | null = null;
+        if (newStatus === 'INTERVIEWING' && result.interviewDate) {
+          const event = await createInterviewEvent(userId, {
+            company: result.company,
+            role: result.role,
+            interviewAt: new Date(result.interviewDate),
+            notes: result.notes
+          });
+          if (event) calendarEventId = event.eventId;
+        }
+
         await prisma.application.create({
           data: {
             userId,
@@ -157,14 +194,17 @@ export const fetchAndProcessEmails = async (userId: string) => {
             salary: result.salary || null,
             location: result.location || null,
             url: `https://mail.google.com/mail/u/0/#inbox/${msg.id}`,
-            emailId: msg.id
+            emailId: msg.id,
+            calendarEventId,
+            notes: result.notes ? `[${new Date().toLocaleDateString()}] Initial: ${result.notes}` : null
           }
         });
+        console.log(`✨ Created Application: ${result.company}`);
       }
 
       await prisma.emailLog.update({
         where: { gmailId: msg.id },
-        data: { processed: true, parsedData: result }
+        data: { processed: true, parsedData: result as any }
       });
 
       processedCount++;

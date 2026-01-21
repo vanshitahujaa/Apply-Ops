@@ -21,6 +21,16 @@ export interface Application {
     salary?: string
     location?: string
     url?: string
+    rounds?: InterviewRound[]
+}
+
+export interface InterviewRound {
+    id: string
+    roundName: string
+    scheduledAt: string
+    status: 'SCHEDULED' | 'COMPLETED' | 'CANCELLED'
+    notes?: string
+    calendarEventId?: string
 }
 
 export interface User {
