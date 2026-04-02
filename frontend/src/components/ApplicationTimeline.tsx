@@ -1,4 +1,4 @@
-import React from 'react'
+
 import type { Application } from '@/lib/types'
 import { Calendar, CheckCircle, Clock, Send, Target, XCircle } from 'lucide-react'
 
@@ -85,7 +85,7 @@ export default function ApplicationTimeline({ application }: Props) {
         <div className="absolute left-6 top-2 bottom-2 w-px bg-zinc-800" />
         
         <div className="space-y-6">
-          {events.map((event, index) => {
+          {events.map((event) => {
             const Icon = event.icon
             return (
               <div key={event.id} className="relative flex gap-4">

@@ -609,7 +609,7 @@ export default function DashboardPage() {
                         This application was auto-merged with medium confidence. Please confirm the details are correct.
                       </p>
                       <div className="flex flex-wrap gap-2 text-sm">
-                        <Button variant="solid" className="w-full sm:w-auto bg-violet-600 hover:bg-violet-500 text-white" onClick={() => handleReviewAction('CONFIRM')}>
+                        <Button variant="gradient" className="w-full sm:w-auto" onClick={() => handleReviewAction('CONFIRM')}>
                           Looks Good
                         </Button>
                         <Button variant="outline" className="w-full sm:w-auto text-zinc-300 border-zinc-600 hover:bg-zinc-800" onClick={() => handleReviewAction('WRONG_MATCH')}>

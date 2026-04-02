@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import api from '@/services/api'
-import { Activity, ShieldCheck, PlayCircle, Eye, RefreshCw, XCircle, Search } from 'lucide-react'
+import { Activity, ShieldCheck, RefreshCw, XCircle, Search } from 'lucide-react'
 import { formatRelativeTime } from '@/lib/utils'
 
 export default function AdminDebugPage() {

@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import api from '@/services/api'
 import { RefreshCw, TrendingUp, Download, PieChart as PieChartIcon } from 'lucide-react'
 import {
-  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
+  Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
   AreaChart, Area,
-  ComposedChart, Line
+  ComposedChart
 } from 'recharts'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
