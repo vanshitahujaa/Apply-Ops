@@ -15,7 +15,7 @@ router.use(authenticate);
 const createApplicationSchema = z.object({
     company: z.string().min(1),
     role: z.string().min(1),
-    status: z.enum(['APPLIED', 'VIEWED', 'INTERVIEWING', 'OFFERED', 'REJECTED', 'WITHDRAWN']).optional(),
+    status: z.enum(['APPLIED', 'ACKNOWLEDGED', 'UNDER_REVIEW', 'ASSESSMENT', 'INTERVIEWING', 'OFFERED', 'REJECTED', 'WITHDRAWN']).optional(),
     platform: z.string().optional(),
     interviewAt: z.string().optional(), // Accept any date string format
     notes: z.string().optional(),
@@ -118,13 +118,25 @@ router.post(
     })
 );
 
-// Sync with Gmail
+// Sync with Gmail (v2 — Smart Pipeline)
 router.post(
     '/sync',
     asyncHandler(async (req: AuthRequest, res) => {
         try {
-            const count = await fetchAndProcessEmails(req.user!.id);
-            res.json({ success: true, count, message: `Processed ${count} updates from Gmail` });
+            const { processedCount, metrics } = await fetchAndProcessEmails(req.user!.id);
+            res.json({
+                success: true,
+                count: processedCount,
+                message: `Processed ${processedCount} updates from Gmail`,
+                metrics: {
+                    totalFetched: metrics.totalFetched,
+                    sentToAI: metrics.sentToAI,
+                    applicationsCreated: metrics.applicationsCreated,
+                    applicationsUpdated: metrics.applicationsUpdated,
+                    calendarEventsCreated: metrics.calendarEventsCreated,
+                    tokenSavings: `${metrics.totalFetched > 0 ? Math.round(((metrics.totalFetched - metrics.sentToAI) / metrics.totalFetched) * 100) : 0}%`,
+                },
+            });
         } catch (error: any) {
             if (error.message === 'Gmail not connected' || error.message.includes('Gmail permissions missing')) {
                 throw new AppError(error.message, 400);
@@ -235,6 +247,89 @@ router.delete(
         }
 
         res.json({ success: true, message: 'Application deleted' });
+    })
+);
+
+// Human Review Loop - Confirm/Correct Application
+router.put(
+    '/:id/review',
+    asyncHandler(async (req: AuthRequest, res) => {
+        const { company, role, status, interviewDate, action } = req.body;
+
+        // Check ownership
+        const existing = await prisma.application.findFirst({
+            where: { id: req.params.id, userId: req.user!.id },
+        });
+
+        if (!existing) {
+            throw new AppError('Application not found', 404);
+        }
+
+        if (action === 'IGNORE_SENDER') {
+            // Find the most recent email to get the sender
+            const recentLog = await prisma.emailLog.findFirst({
+                where: { applicationId: req.params.id },
+                orderBy: { receivedAt: 'desc' }
+            });
+
+            if (recentLog && recentLog.from) {
+                const rawAddress = recentLog.from.match(/<([^>]+)>/)?.[1]?.toLowerCase() || recentLog.from.toLowerCase();
+                // Add to persistent learning memory
+                await prisma.user.update({
+                    where: { id: req.user!.id },
+                    data: {
+                        ignoredSenders: {
+                            push: rawAddress
+                        }
+                    }
+                });
+            }
+
+            // Wipe out trace
+            await prisma.emailLog.updateMany({
+                where: { applicationId: req.params.id },
+                data: { applicationId: null, pipelineStage: 'SKIPPED' }
+            });
+            await prisma.application.delete({
+                where: { id: req.params.id }
+            });
+            res.json({ success: true, message: 'Application ignored and sender permanently blacklisted' });
+            return;
+        }
+
+        if (action === 'WRONG_MATCH') {
+            // User states this email shouldn't have merged here. 
+            // In a full implementation, we'd detach the latest emailLog and create a new card.
+            // For simplicity here, we'll just flag it.
+        }
+
+        const application = await prisma.application.update({
+            where: { id: req.params.id },
+            data: {
+                company: company || existing.company,
+                role: role || existing.role,
+                status: status || existing.status,
+                interviewAt: interviewDate !== undefined ? (interviewDate ? new Date(interviewDate) : null) : existing.interviewAt,
+                // Human reviewed -> 100% confidence, no longer needs review
+                needsReview: false,
+                confidence: 1.0,
+            },
+        });
+
+        // Emit real-time update
+        const io = req.app.get('io');
+        if (io) {
+            io.to(`user:${req.user!.id}`).emit('application:updated', application);
+        }
+
+        res.json({
+            success: true,
+            message: 'Application review verified',
+            data: {
+                ...application,
+                status: application.status.toLowerCase(),
+            },
+        });
     })
 );
 

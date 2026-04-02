@@ -9,6 +9,7 @@ import {
     LogOut,
     Mail,
     X,
+    Activity
 } from 'lucide-react'
 
 const navItems = [
@@ -16,6 +17,7 @@ const navItems = [
     { icon: BarChart3, label: 'Analytics', href: '/analytics' },
     { icon: FileText, label: 'Resumes', href: '/resumes' },
     { icon: Settings, label: 'Settings', href: '/settings' },
+    { icon: Activity, label: 'Internal Debug', href: '/admin' },
 ]
 
 interface SidebarProps {

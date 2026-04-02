@@ -9,88 +9,153 @@ const getGenAI = () => {
     return new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 };
 
-// ---------- Email Analyzer ----------
+// ---------- Email Verifier (v2.1 — Structured Verifier) ----------
+// Receives pre-classified hints and asks Gemini to CONFIRM/CORRECT.
+// Uses strict JSON schema, validates response before returning.
 
-export const analyzeEmailAI = async (
-    emailBody: string,
-    subject: string,
-    sender: string
-): Promise<{
+export interface PreClassificationHints {
+    company: string | null;
+    role: string | null;
+    interviewDate: string | null;
+    deadline: string | null;
+    suggestedStatus: string | null;
+    detectedRound: string | null;
+    meetingLink: string | null;
+    platform: string;
+    isReschedule: boolean;
+    isCancellation: boolean;
+}
+
+export interface VerifiedEmailResult {
     company: string;
     role: string;
-    status: string; // APPLIED | INTERVIEW | REJECTED | OFFER
-    round?: string; // e.g. "Technical Round", "Coding Assessment", "HR Round"
+    status: 'APPLIED' | 'ACKNOWLEDGED' | 'UNDER_REVIEW' | 'ASSESSMENT' | 'INTERVIEWING' | 'OFFERED' | 'REJECTED';
+    round: string | null;
     confidence: number;
-    interviewDate?: string | null;
-    location?: string | null;
-    salary?: string | null;
-    platform?: string | null;
-    notes?: string;
-} | null> => {
-    if (!process.env.GEMINI_API_KEY) return null;
+    interviewDate: string | null;
+    deadline: string | null;
+    location: string | null;
+    salary: string | null;
+    notes: string;
+    needsCalendar: boolean;
+}
 
-    const quick = (subject + emailBody).toLowerCase();
-    // Optimized Keywords for quick filter
-    if (!quick.match(/application|interview|offer|unfortunately|assessment|moving forward|schedule|round|coding|technical|joining|feedback/))
-        return null;
+// Valid statuses for validation
+const VALID_STATUSES = ['APPLIED', 'ACKNOWLEDGED', 'UNDER_REVIEW', 'ASSESSMENT', 'INTERVIEWING', 'OFFERED', 'REJECTED'];
+
+export const verifyEmailAI = async (
+    subject: string,
+    cleanBody: string,
+    sender: string,
+    hints: PreClassificationHints
+): Promise<VerifiedEmailResult | null> => {
+    if (!process.env.GEMINI_API_KEY) return null;
 
     try {
         const genAI = getGenAI();
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        const model = genAI.getGenerativeModel({
+            model: "gemini-2.0-flash",
+            generationConfig: { temperature: 0.1 }
+        });
 
-        const prompt = `
-Analyze this job-related email. Return JSON ONLY.
+        const prompt = `You are a job email verifier. Our script pre-screened this email and extracted:
+- Company: "${hints.company || '?'}"
+- Role: "${hints.role || '?'}"  
+- Status: "${hints.suggestedStatus || '?'}"
+- Round: "${hints.detectedRound || 'none'}"
+- Interview Date: "${hints.interviewDate || 'none'}"
+- Deadline: "${hints.deadline || 'none'}"
+- Reschedule: ${hints.isReschedule}
+- Cancellation: ${hints.isCancellation}
 
-Context:
-- Detect the Company and Role.
-- Detect the Status: APPLIED, INTERVIEW, REJECTED, OFFER.
-- Detect the Round: "Screening", "Technical Round", "Coding Assessment", "System Design", "Managerial", "HR", "Final Round", "Offer Letter", "Joining Letter".
-- Extract EXACT Interview Date/Time (ISO format) if present.
-
-Input:
-Sender: ${sender}
-Subject: ${subject}
-Body: ${emailBody.substring(0, 3000)}
-
-Output Structure:
+CONFIRM or CORRECT these values. Return STRICT JSON ONLY:
 {
   "isJobEmail": boolean,
-  "company": "string",
-  "role": "string",
-  "status": "APPLIED | INTERVIEW | REJECTED | OFFER",
-  "round": "string or null",
-  "confidence": number (0.0-1.0),
-  "interviewDate": "ISO date string or null",
-  "location": "string or null",
-  "salary": "string or null",
-  "platform": "string or null",
-  "summary": "Brief 1-sentence summary of the update"
+  "company": "exact company name",
+  "role": "exact job title",
+  "status": "APPLIED|ACKNOWLEDGED|UNDER_REVIEW|ASSESSMENT|INTERVIEWING|OFFERED|REJECTED",
+  "round": "round name or null",
+  "confidence": 0.0 to 1.0,
+  "interviewDate": "ISO datetime or null",
+  "deadline": "ISO datetime or null",
+  "location": "city/remote or null",
+  "salary": "compensation or null",
+  "summary": "1-sentence update summary",
+  "needsCalendar": boolean
 }
-`;
+
+Status meanings:
+- APPLIED: User applied, no acknowledgement yet
+- ACKNOWLEDGED: Company confirmed receipt of application
+- UNDER_REVIEW: Application is being evaluated
+- ASSESSMENT: Coding test / OA / take-home pending
+- INTERVIEWING: Interview scheduled or in progress
+- OFFERED: Job offer extended
+- REJECTED: Application rejected
+
+Sender: ${sender}
+Subject: ${subject}
+Body: ${cleanBody}`;
 
         const result = await model.generateContent(prompt);
         let text = result.response.text().replace(/```json|```/g, '').trim();
         const data = JSON.parse(text);
 
+        // --- Backend validation of AI response ---
         if (!data.isJobEmail) return null;
+        if (typeof data.confidence !== 'number' || data.confidence < 0 || data.confidence > 1) {
+            data.confidence = 0.5; // Default if invalid
+        }
+
+        // Validate status
+        let status = data.status?.toUpperCase();
+        if (!VALID_STATUSES.includes(status)) {
+            // Map legacy statuses
+            if (status === 'INTERVIEW') status = 'INTERVIEWING';
+            else if (status === 'OFFER') status = 'OFFERED';
+            else status = hints.suggestedStatus || 'APPLIED';
+        }
 
         return {
-            company: data.company,
-            role: data.role || 'Unknown Role',
-            status: data.status,
-            round: data.round || null,
-            confidence: data.confidence || 0.8,
-            interviewDate: data.interviewDate || null,
+            company: data.company || hints.company || 'Unknown',
+            role: data.role || hints.role || 'Unknown Role',
+            status: status as VerifiedEmailResult['status'],
+            round: data.round || hints.detectedRound || null,
+            confidence: data.confidence,
+            interviewDate: data.interviewDate || hints.interviewDate || null,
+            deadline: data.deadline || hints.deadline || null,
             location: data.location || null,
             salary: data.salary || null,
-            platform: data.platform || null,
-            notes: data.summary // Save summary as notes
+            notes: data.summary || '',
+            needsCalendar: data.needsCalendar ?? (status === 'INTERVIEWING' && !!(data.interviewDate || hints.interviewDate)),
         };
 
     } catch (e: any) {
-        console.error('AI Email Analysis Failed', e);
-        return null;
+        console.error('AI Email Verification Failed:', e);
+        throw e;
     }
+};
+
+// ---------- Legacy Email Analyzer (v1 — Deprecated) ----------
+// Kept for backward compatibility. New code should use verifyEmailAI().
+
+export const analyzeEmailAI = async (
+    emailBody: string,
+    subject: string,
+    sender: string
+): Promise<VerifiedEmailResult | null> => {
+    return verifyEmailAI(subject, emailBody.substring(0, 1500), sender, {
+        company: null,
+        role: null,
+        interviewDate: null,
+        deadline: null,
+        suggestedStatus: null,
+        detectedRound: null,
+        meetingLink: null,
+        platform: 'Unknown',
+        isReschedule: false,
+        isCancellation: false,
+    });
 };
 
 // ---------- Resume ATS Analyzer ----------

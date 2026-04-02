@@ -1,0 +1,121 @@
+[
+  {
+    "id": "email_1_gh_apply",
+    "threadId": "thread_A",
+    "date": "2026-04-01T10:00:00Z",
+    "from": "Greenhouse <no-reply@greenhouse.io>",
+    "subject": "Thank you for applying to Stripe",
+    "body": "Hi there,\n\nThank you for applying to the Frontend Engineer role at Stripe. We have received your application and our team is currently reviewing your profile.\n\nWe will get back to you if there is a fit.\n\nBest,\nStripe Recruiting",
+    "expected": {
+      "shouldSendToAI": true,
+      "status": "ACKNOWLEDGED",
+      "company": "Stripe",
+      "role": "Frontend Engineer",
+      "hasDate": false,
+      "isSpam": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "email_2_lever_invite",
+    "threadId": "thread_B",
+    "date": "2026-04-02T09:00:00Z",
+    "from": "Recruiting <careers@discord.com>",
+    "subject": "Interview Invitation: Backend Engineer @ Discord",
+    "body": "Hello,\n\nWe'd like to invite you for a 30-minute screening call. Are you available tomorrow at 4:00 PM EST?\n\nWe will chat via Google Meet: https://meet.google.com/abc-defg-hij\n\nThanks!",
+    "expected": {
+      "shouldSendToAI": true,
+      "status": "INTERVIEWING",
+      "company": "Discord",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "isSpam": false,
+      "meetingLink": "https://meet.google.com/abc-defg-hij",
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "email_3_spam_newsletter",
+    "threadId": "thread_C",
+    "date": "2026-04-02T12:00:00Z",
+    "from": "LinkedIn Job Alerts <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching 'Software Engineer'",
+    "body": "Here are your daily job recommendations for you. \n\n1. Software Engineer at Google\n2. Frontend Dev at Meta\n\nClick here to unsubscribe from job alerts.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "email_4_hackerrank",
+    "threadId": "thread_D",
+    "date": "2026-04-03T10:00:00Z",
+    "from": "HackerRank Invitations <invites@hackerrank.com>",
+    "subject": "Invitation to Amazon Online Assessment",
+    "body": "Dear Candidate,\n\nYou have been invited by Amazon to take an online assessment on HackerRank.\n\nThis assessment expires in 48 hours. Please complete by April 5, 2026 at 11:59 PM.\nStart test: https://hr.gs/amz-1234",
+    "expected": {
+      "shouldSendToAI": true,
+      "status": "ASSESSMENT",
+      "company": "Amazon",
+      "hasDeadline": true,
+      "isSpam": false
+    }
+  },
+  {
+    "id": "email_5_reschedule",
+    "threadId": "thread_B",
+    "date": "2026-04-02T15:00:00Z",
+    "from": "Recruiting <careers@discord.com>",
+    "subject": "Re: Interview Invitation: Backend Engineer @ Discord",
+    "body": "Hi,\n\nUnfortunately, our interviewer is out sick. We need to reschedule. Does next Wednesday at 2pm work instead?\n\nSame link: https://meet.google.com/abc-defg-hij",
+    "expected": {
+      "shouldSendToAI": true,
+      "status": "INTERVIEWING",
+      "company": "Discord",
+      "hasDate": true,
+      "isSpam": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "email_6_workday_reject",
+    "threadId": "thread_E",
+    "date": "2026-04-04T08:00:00Z",
+    "from": "Workday <system@myworkday.com>",
+    "subject": "Update on your application at Spotify",
+    "body": "Thank you for taking the time to apply to Spotify.\n\nWhile your background is impressive, we have decided to move forward with other candidates who more closely fit our needs at this time.\n\nWe will keep your resume on file. Wish you all the best in your future endeavors.",
+    "expected": {
+      "shouldSendToAI": true,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "isSpam": false
+    }
+  },
+  {
+    "id": "email_7_offer",
+    "threadId": "thread_F",
+    "date": "2026-04-05T09:00:00Z",
+    "from": "Jane Doe <jdoe@netflix.com>",
+    "subject": "Offer from Netflix: Senior Engineer",
+    "body": "Hi,\n\nWe are absolutely delighted to offer you the Senior Engineer position! Please review the attached compensation details. Your proposed start date is May 1st.\n\nWelcome to the team!",
+    "expected": {
+      "shouldSendToAI": true,
+      "status": "OFFERED",
+      "company": "Netflix",
+      "role": "Senior Engineer",
+      "isSpam": false
+    }
+  },
+  {
+    "id": "email_8_sneaky_spam",
+    "threadId": "thread_G",
+    "date": "2026-04-05T10:00:00Z",
+    "from": "Resume Advisor <hello@resume.io>",
+    "subject": "Fix your resume to get that Interview!",
+    "body": "Are you struggling to get an interview scheduled? Do you want more job offers?\n\nSign up for our premium membership today and upgrade your plan.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  }
+]

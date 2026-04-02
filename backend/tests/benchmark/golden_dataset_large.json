@@ -1,0 +1,3682 @@
+[
+  {
+    "id": "gen_1",
+    "threadId": "thread_google_software_engineer",
+    "date": "2026-01-22T21:20:17.383Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Thank you for applying to Google",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Google. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Google",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_2",
+    "threadId": "thread_google_software_engineer",
+    "date": "2026-01-05T15:14:51.031Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Interview Invitation: Software Engineer @ Google",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_3",
+    "threadId": "thread_google_software_engineer",
+    "date": "2026-01-03T06:16:25.541Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Update on your Google application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Google",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_4",
+    "threadId": "thread_google_software_engineer",
+    "date": "2026-03-06T11:01:21.245Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Offer from Google",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Google",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_5",
+    "threadId": "thread_google_software_engineer",
+    "date": "2025-12-21T11:02:25.338Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Google Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Google",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_6",
+    "threadId": "thread_google_frontend_developer",
+    "date": "2026-01-07T17:19:38.306Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Thank you for applying to Google",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Google. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Google",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_7",
+    "threadId": "thread_google_frontend_developer",
+    "date": "2025-12-10T07:43:13.066Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Interview Invitation: Frontend Developer @ Google",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_8",
+    "threadId": "thread_google_frontend_developer",
+    "date": "2026-02-27T13:40:16.020Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Update on your Google application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Google",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_9",
+    "threadId": "thread_google_frontend_developer",
+    "date": "2025-12-17T03:31:45.750Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Offer from Google",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Google",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_10",
+    "threadId": "thread_google_frontend_developer",
+    "date": "2026-03-14T17:03:49.669Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Google Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Google",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_11",
+    "threadId": "thread_google_backend_engineer",
+    "date": "2026-01-01T01:11:03.757Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Thank you for applying to Google",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Google. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Google",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_12",
+    "threadId": "thread_google_backend_engineer",
+    "date": "2026-01-20T19:36:34.872Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Interview Invitation: Backend Engineer @ Google",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_13",
+    "threadId": "thread_google_backend_engineer",
+    "date": "2025-12-22T14:40:58.559Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Update on your Google application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Google",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_14",
+    "threadId": "thread_google_backend_engineer",
+    "date": "2025-12-14T05:37:05.193Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Offer from Google",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Google",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_15",
+    "threadId": "thread_google_backend_engineer",
+    "date": "2025-12-22T17:22:32.644Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Google Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Google",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_16",
+    "threadId": "thread_google_product_manager",
+    "date": "2026-01-11T20:43:17.905Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Thank you for applying to Google",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Google. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Google",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_17",
+    "threadId": "thread_google_product_manager",
+    "date": "2025-12-08T19:03:21.227Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Interview Invitation: Product Manager @ Google",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_18",
+    "threadId": "thread_google_product_manager",
+    "date": "2026-03-17T14:02:43.198Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Update on your Google application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Google",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_19",
+    "threadId": "thread_google_product_manager",
+    "date": "2026-02-27T08:16:34.140Z",
+    "from": "Google <no-reply@google.com>",
+    "subject": "Offer from Google",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Google",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_20",
+    "threadId": "thread_google_product_manager",
+    "date": "2026-02-01T19:32:04.761Z",
+    "from": "Google <no-reply@ashbyhq.com>",
+    "subject": "Google Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Google",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_21",
+    "threadId": "thread_stripe_software_engineer",
+    "date": "2025-12-24T03:27:55.806Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Thank you for applying to Stripe",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Stripe. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Stripe",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_22",
+    "threadId": "thread_stripe_software_engineer",
+    "date": "2025-12-07T23:24:30.442Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Interview Invitation: Software Engineer @ Stripe",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_23",
+    "threadId": "thread_stripe_software_engineer",
+    "date": "2026-02-03T08:42:11.016Z",
+    "from": "Stripe <no-reply@greenhouse.io>",
+    "subject": "Update on your Stripe application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Stripe",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_24",
+    "threadId": "thread_stripe_software_engineer",
+    "date": "2026-01-24T19:31:02.027Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Offer from Stripe",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Stripe",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_25",
+    "threadId": "thread_stripe_software_engineer",
+    "date": "2026-02-04T03:14:04.994Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Stripe Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Stripe",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_26",
+    "threadId": "thread_stripe_frontend_developer",
+    "date": "2026-03-14T11:47:35.158Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Thank you for applying to Stripe",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Stripe. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Stripe",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_27",
+    "threadId": "thread_stripe_frontend_developer",
+    "date": "2026-01-17T14:54:52.074Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Interview Invitation: Frontend Developer @ Stripe",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_28",
+    "threadId": "thread_stripe_frontend_developer",
+    "date": "2025-12-12T10:54:18.775Z",
+    "from": "Stripe <no-reply@jobs.lever.co>",
+    "subject": "Update on your Stripe application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Stripe",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_29",
+    "threadId": "thread_stripe_frontend_developer",
+    "date": "2026-02-19T20:18:58.044Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Offer from Stripe",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Stripe",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_30",
+    "threadId": "thread_stripe_frontend_developer",
+    "date": "2026-02-19T21:15:36.583Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Stripe Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Stripe",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_31",
+    "threadId": "thread_stripe_backend_engineer",
+    "date": "2026-03-02T17:28:08.835Z",
+    "from": "Stripe <no-reply@jobs.lever.co>",
+    "subject": "Thank you for applying to Stripe",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Stripe. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Stripe",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_32",
+    "threadId": "thread_stripe_backend_engineer",
+    "date": "2026-01-29T16:31:41.172Z",
+    "from": "Stripe <no-reply@jobs.lever.co>",
+    "subject": "Interview Invitation: Backend Engineer @ Stripe",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_33",
+    "threadId": "thread_stripe_backend_engineer",
+    "date": "2026-02-20T12:38:28.063Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Update on your Stripe application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Stripe",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_34",
+    "threadId": "thread_stripe_backend_engineer",
+    "date": "2026-04-02T10:28:46.180Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Offer from Stripe",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Stripe",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_35",
+    "threadId": "thread_stripe_backend_engineer",
+    "date": "2026-03-27T02:46:48.965Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Stripe Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Stripe",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_36",
+    "threadId": "thread_stripe_product_manager",
+    "date": "2026-03-27T18:37:58.191Z",
+    "from": "Stripe <no-reply@myworkday.com>",
+    "subject": "Thank you for applying to Stripe",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Stripe. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Stripe",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_37",
+    "threadId": "thread_stripe_product_manager",
+    "date": "2026-01-31T16:00:55.155Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Interview Invitation: Product Manager @ Stripe",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_38",
+    "threadId": "thread_stripe_product_manager",
+    "date": "2025-12-24T14:21:15.397Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Update on your Stripe application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Stripe",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_39",
+    "threadId": "thread_stripe_product_manager",
+    "date": "2025-12-22T17:05:02.150Z",
+    "from": "Stripe <no-reply@stripe.com>",
+    "subject": "Offer from Stripe",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Stripe",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_40",
+    "threadId": "thread_stripe_product_manager",
+    "date": "2026-01-26T02:14:57.264Z",
+    "from": "Stripe <no-reply@greenhouse.io>",
+    "subject": "Stripe Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Stripe",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_41",
+    "threadId": "thread_meta_software_engineer",
+    "date": "2025-12-11T18:47:31.492Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Thank you for applying to Meta",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Meta. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Meta",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_42",
+    "threadId": "thread_meta_software_engineer",
+    "date": "2026-03-29T23:47:35.520Z",
+    "from": "Meta <no-reply@myworkday.com>",
+    "subject": "Interview Invitation: Software Engineer @ Meta",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_43",
+    "threadId": "thread_meta_software_engineer",
+    "date": "2026-02-14T03:38:24.423Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Update on your Meta application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Meta",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_44",
+    "threadId": "thread_meta_software_engineer",
+    "date": "2026-01-31T06:42:12.110Z",
+    "from": "Meta <no-reply@ashbyhq.com>",
+    "subject": "Offer from Meta",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Meta",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_45",
+    "threadId": "thread_meta_software_engineer",
+    "date": "2026-03-17T23:45:28.076Z",
+    "from": "Meta <no-reply@myworkday.com>",
+    "subject": "Meta Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Meta",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_46",
+    "threadId": "thread_meta_frontend_developer",
+    "date": "2026-03-09T08:06:52.969Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Thank you for applying to Meta",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Meta. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Meta",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_47",
+    "threadId": "thread_meta_frontend_developer",
+    "date": "2026-02-01T10:02:49.346Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Interview Invitation: Frontend Developer @ Meta",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_48",
+    "threadId": "thread_meta_frontend_developer",
+    "date": "2026-03-05T19:02:05.342Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Update on your Meta application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Meta",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_49",
+    "threadId": "thread_meta_frontend_developer",
+    "date": "2026-01-08T18:42:02.666Z",
+    "from": "Meta <no-reply@myworkday.com>",
+    "subject": "Offer from Meta",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Meta",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_50",
+    "threadId": "thread_meta_frontend_developer",
+    "date": "2026-02-16T21:10:27.358Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Meta Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Meta",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_51",
+    "threadId": "thread_meta_backend_engineer",
+    "date": "2026-02-27T13:40:54.386Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Thank you for applying to Meta",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Meta. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Meta",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_52",
+    "threadId": "thread_meta_backend_engineer",
+    "date": "2026-01-02T00:08:52.670Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Interview Invitation: Backend Engineer @ Meta",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_53",
+    "threadId": "thread_meta_backend_engineer",
+    "date": "2026-01-26T09:51:33.259Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Update on your Meta application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Meta",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_54",
+    "threadId": "thread_meta_backend_engineer",
+    "date": "2026-01-18T02:45:00.889Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Offer from Meta",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Meta",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_55",
+    "threadId": "thread_meta_backend_engineer",
+    "date": "2025-12-09T16:46:43.570Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Meta Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Meta",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_56",
+    "threadId": "thread_meta_product_manager",
+    "date": "2025-12-16T06:04:56.103Z",
+    "from": "Meta <no-reply@myworkday.com>",
+    "subject": "Thank you for applying to Meta",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Meta. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Meta",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_57",
+    "threadId": "thread_meta_product_manager",
+    "date": "2025-12-13T02:05:56.799Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Interview Invitation: Product Manager @ Meta",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_58",
+    "threadId": "thread_meta_product_manager",
+    "date": "2026-01-04T16:31:06.607Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Update on your Meta application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Meta",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_59",
+    "threadId": "thread_meta_product_manager",
+    "date": "2026-01-12T19:46:12.543Z",
+    "from": "Meta <no-reply@greenhouse.io>",
+    "subject": "Offer from Meta",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Meta",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_60",
+    "threadId": "thread_meta_product_manager",
+    "date": "2025-12-19T00:01:36.036Z",
+    "from": "Meta <no-reply@meta.com>",
+    "subject": "Meta Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Meta",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_61",
+    "threadId": "thread_netflix_software_engineer",
+    "date": "2026-03-12T09:15:49.600Z",
+    "from": "Netflix <no-reply@greenhouse.io>",
+    "subject": "Thank you for applying to Netflix",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Netflix. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Netflix",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_62",
+    "threadId": "thread_netflix_software_engineer",
+    "date": "2026-01-29T18:21:37.707Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Interview Invitation: Software Engineer @ Netflix",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Netflix",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_63",
+    "threadId": "thread_netflix_software_engineer",
+    "date": "2026-01-23T10:37:30.158Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Update on your Netflix application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Netflix",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_64",
+    "threadId": "thread_netflix_software_engineer",
+    "date": "2026-03-05T15:43:26.800Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Offer from Netflix",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Netflix",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_65",
+    "threadId": "thread_netflix_software_engineer",
+    "date": "2026-03-20T20:44:46.902Z",
+    "from": "Netflix <no-reply@greenhouse.io>",
+    "subject": "Netflix Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Netflix",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_66",
+    "threadId": "thread_netflix_frontend_developer",
+    "date": "2026-03-19T12:01:38.446Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Thank you for applying to Netflix",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Netflix. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Netflix",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_67",
+    "threadId": "thread_netflix_frontend_developer",
+    "date": "2026-01-09T10:06:39.359Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Interview Invitation: Frontend Developer @ Netflix",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Netflix",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_68",
+    "threadId": "thread_netflix_frontend_developer",
+    "date": "2025-12-14T02:29:18.528Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Update on your Netflix application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Netflix",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_69",
+    "threadId": "thread_netflix_frontend_developer",
+    "date": "2026-03-18T00:55:41.307Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Offer from Netflix",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Netflix",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_70",
+    "threadId": "thread_netflix_frontend_developer",
+    "date": "2026-04-01T10:35:08.183Z",
+    "from": "Netflix <no-reply@myworkday.com>",
+    "subject": "Netflix Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Netflix",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_71",
+    "threadId": "thread_netflix_backend_engineer",
+    "date": "2026-03-31T01:08:56.430Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Thank you for applying to Netflix",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Netflix. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Netflix",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_72",
+    "threadId": "thread_netflix_backend_engineer",
+    "date": "2026-03-12T20:52:09.371Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Interview Invitation: Backend Engineer @ Netflix",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Netflix",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_73",
+    "threadId": "thread_netflix_backend_engineer",
+    "date": "2026-03-29T20:48:16.938Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Update on your Netflix application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Netflix",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_74",
+    "threadId": "thread_netflix_backend_engineer",
+    "date": "2026-01-05T18:45:30.359Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Offer from Netflix",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Netflix",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_75",
+    "threadId": "thread_netflix_backend_engineer",
+    "date": "2026-01-25T17:31:51.986Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Netflix Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Netflix",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_76",
+    "threadId": "thread_netflix_product_manager",
+    "date": "2026-02-28T10:51:37.496Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Thank you for applying to Netflix",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Netflix. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Netflix",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_77",
+    "threadId": "thread_netflix_product_manager",
+    "date": "2026-03-29T21:08:00.795Z",
+    "from": "Netflix <no-reply@netflix.com>",
+    "subject": "Interview Invitation: Product Manager @ Netflix",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Netflix",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_78",
+    "threadId": "thread_netflix_product_manager",
+    "date": "2026-01-30T00:43:37.460Z",
+    "from": "Netflix <no-reply@ashbyhq.com>",
+    "subject": "Update on your Netflix application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Netflix",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_79",
+    "threadId": "thread_netflix_product_manager",
+    "date": "2026-03-23T22:28:58.018Z",
+    "from": "Netflix <no-reply@myworkday.com>",
+    "subject": "Offer from Netflix",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Netflix",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_80",
+    "threadId": "thread_netflix_product_manager",
+    "date": "2025-12-31T16:36:59.219Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Netflix Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Netflix",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_81",
+    "threadId": "thread_spotify_software_engineer",
+    "date": "2026-03-20T19:19:44.115Z",
+    "from": "Spotify <no-reply@ashbyhq.com>",
+    "subject": "Thank you for applying to Spotify",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Spotify. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Spotify",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_82",
+    "threadId": "thread_spotify_software_engineer",
+    "date": "2026-02-11T09:21:43.923Z",
+    "from": "Spotify <no-reply@jobs.lever.co>",
+    "subject": "Interview Invitation: Software Engineer @ Spotify",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Spotify",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_83",
+    "threadId": "thread_spotify_software_engineer",
+    "date": "2025-12-28T14:21:41.907Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Update on your Spotify application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_84",
+    "threadId": "thread_spotify_software_engineer",
+    "date": "2025-12-28T22:10:11.555Z",
+    "from": "Spotify <no-reply@myworkday.com>",
+    "subject": "Offer from Spotify",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Spotify",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_85",
+    "threadId": "thread_spotify_software_engineer",
+    "date": "2026-02-06T21:02:31.172Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Spotify Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Spotify",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_86",
+    "threadId": "thread_spotify_frontend_developer",
+    "date": "2025-12-14T19:53:20.473Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Thank you for applying to Spotify",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Spotify. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Spotify",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_87",
+    "threadId": "thread_spotify_frontend_developer",
+    "date": "2026-01-28T06:34:59.334Z",
+    "from": "Spotify <no-reply@greenhouse.io>",
+    "subject": "Interview Invitation: Frontend Developer @ Spotify",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Spotify",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_88",
+    "threadId": "thread_spotify_frontend_developer",
+    "date": "2025-12-25T00:28:36.743Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Update on your Spotify application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_89",
+    "threadId": "thread_spotify_frontend_developer",
+    "date": "2026-03-22T03:05:46.629Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Offer from Spotify",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Spotify",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_90",
+    "threadId": "thread_spotify_frontend_developer",
+    "date": "2025-12-21T01:54:40.823Z",
+    "from": "Spotify <no-reply@myworkday.com>",
+    "subject": "Spotify Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Spotify",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_91",
+    "threadId": "thread_spotify_backend_engineer",
+    "date": "2026-02-06T22:00:13.480Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Thank you for applying to Spotify",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Spotify. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Spotify",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_92",
+    "threadId": "thread_spotify_backend_engineer",
+    "date": "2025-12-25T14:54:55.994Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Interview Invitation: Backend Engineer @ Spotify",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Spotify",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_93",
+    "threadId": "thread_spotify_backend_engineer",
+    "date": "2025-12-18T05:17:42.822Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Update on your Spotify application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_94",
+    "threadId": "thread_spotify_backend_engineer",
+    "date": "2025-12-11T04:59:56.900Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Offer from Spotify",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Spotify",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_95",
+    "threadId": "thread_spotify_backend_engineer",
+    "date": "2025-12-10T03:48:38.352Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Spotify Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Spotify",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_96",
+    "threadId": "thread_spotify_product_manager",
+    "date": "2026-03-26T11:28:38.440Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Thank you for applying to Spotify",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Spotify. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Spotify",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_97",
+    "threadId": "thread_spotify_product_manager",
+    "date": "2026-01-31T04:29:56.463Z",
+    "from": "Spotify <no-reply@ashbyhq.com>",
+    "subject": "Interview Invitation: Product Manager @ Spotify",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Spotify",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_98",
+    "threadId": "thread_spotify_product_manager",
+    "date": "2026-03-01T09:58:42.100Z",
+    "from": "Spotify <no-reply@spotify.com>",
+    "subject": "Update on your Spotify application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_99",
+    "threadId": "thread_spotify_product_manager",
+    "date": "2026-02-25T13:38:04.640Z",
+    "from": "Spotify <no-reply@jobs.lever.co>",
+    "subject": "Offer from Spotify",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Spotify",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_100",
+    "threadId": "thread_spotify_product_manager",
+    "date": "2026-02-14T09:26:45.872Z",
+    "from": "Spotify <no-reply@jobs.lever.co>",
+    "subject": "Spotify Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Spotify",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_101",
+    "threadId": "thread_discord_software_engineer",
+    "date": "2026-02-02T22:43:50.758Z",
+    "from": "Discord <no-reply@greenhouse.io>",
+    "subject": "Thank you for applying to Discord",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Discord. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Discord",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_102",
+    "threadId": "thread_discord_software_engineer",
+    "date": "2026-02-02T08:20:40.416Z",
+    "from": "Discord <no-reply@jobs.lever.co>",
+    "subject": "Interview Invitation: Software Engineer @ Discord",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Discord",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_103",
+    "threadId": "thread_discord_software_engineer",
+    "date": "2026-01-19T09:36:03.289Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Update on your Discord application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Discord",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_104",
+    "threadId": "thread_discord_software_engineer",
+    "date": "2026-02-18T05:27:15.417Z",
+    "from": "Discord <no-reply@ashbyhq.com>",
+    "subject": "Offer from Discord",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Discord",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_105",
+    "threadId": "thread_discord_software_engineer",
+    "date": "2026-01-07T20:20:48.463Z",
+    "from": "Discord <no-reply@myworkday.com>",
+    "subject": "Discord Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Discord",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_106",
+    "threadId": "thread_discord_frontend_developer",
+    "date": "2026-02-19T18:56:30.388Z",
+    "from": "Discord <no-reply@discord.com>",
+    "subject": "Thank you for applying to Discord",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Discord. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Discord",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_107",
+    "threadId": "thread_discord_frontend_developer",
+    "date": "2025-12-19T18:57:31.644Z",
+    "from": "Discord <no-reply@jobs.lever.co>",
+    "subject": "Interview Invitation: Frontend Developer @ Discord",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Discord",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_108",
+    "threadId": "thread_discord_frontend_developer",
+    "date": "2025-12-16T15:01:44.372Z",
+    "from": "Discord <no-reply@jobs.lever.co>",
+    "subject": "Update on your Discord application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Discord",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_109",
+    "threadId": "thread_discord_frontend_developer",
+    "date": "2026-01-30T20:59:59.669Z",
+    "from": "Discord <no-reply@discord.com>",
+    "subject": "Offer from Discord",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Discord",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_110",
+    "threadId": "thread_discord_frontend_developer",
+    "date": "2026-02-04T04:02:11.842Z",
+    "from": "Discord <no-reply@discord.com>",
+    "subject": "Discord Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Discord",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_111",
+    "threadId": "thread_discord_backend_engineer",
+    "date": "2026-03-08T02:17:17.634Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Thank you for applying to Discord",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Discord. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Discord",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_112",
+    "threadId": "thread_discord_backend_engineer",
+    "date": "2026-02-26T23:23:51.941Z",
+    "from": "Discord <no-reply@discord.com>",
+    "subject": "Interview Invitation: Backend Engineer @ Discord",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Discord",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_113",
+    "threadId": "thread_discord_backend_engineer",
+    "date": "2026-03-28T21:19:51.989Z",
+    "from": "Discord <no-reply@discord.com>",
+    "subject": "Update on your Discord application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Discord",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_114",
+    "threadId": "thread_discord_backend_engineer",
+    "date": "2026-01-11T21:00:08.799Z",
+    "from": "Discord <no-reply@jobs.lever.co>",
+    "subject": "Offer from Discord",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Discord",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_115",
+    "threadId": "thread_discord_backend_engineer",
+    "date": "2026-03-06T06:33:36.388Z",
+    "from": "Recruiting Team <no-reply@myworkday.com>",
+    "subject": "Discord Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Discord",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_116",
+    "threadId": "thread_discord_product_manager",
+    "date": "2025-12-23T20:30:29.212Z",
+    "from": "Discord <no-reply@greenhouse.io>",
+    "subject": "Thank you for applying to Discord",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Discord. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Discord",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_117",
+    "threadId": "thread_discord_product_manager",
+    "date": "2026-03-08T04:30:05.285Z",
+    "from": "Discord <no-reply@myworkday.com>",
+    "subject": "Interview Invitation: Product Manager @ Discord",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Discord",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_118",
+    "threadId": "thread_discord_product_manager",
+    "date": "2026-03-24T03:22:47.843Z",
+    "from": "Discord <no-reply@ashbyhq.com>",
+    "subject": "Update on your Discord application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Discord",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_119",
+    "threadId": "thread_discord_product_manager",
+    "date": "2026-02-26T08:58:00.415Z",
+    "from": "Discord <no-reply@ashbyhq.com>",
+    "subject": "Offer from Discord",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Discord",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_120",
+    "threadId": "thread_discord_product_manager",
+    "date": "2025-12-09T05:24:28.083Z",
+    "from": "Discord <no-reply@greenhouse.io>",
+    "subject": "Discord Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Discord",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_121",
+    "threadId": "thread_airbnb_software_engineer",
+    "date": "2026-02-16T01:34:49.606Z",
+    "from": "Airbnb <no-reply@ashbyhq.com>",
+    "subject": "Thank you for applying to Airbnb",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Airbnb. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Airbnb",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_122",
+    "threadId": "thread_airbnb_software_engineer",
+    "date": "2026-02-09T23:21:18.110Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Interview Invitation: Software Engineer @ Airbnb",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Airbnb",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_123",
+    "threadId": "thread_airbnb_software_engineer",
+    "date": "2026-03-04T21:22:20.143Z",
+    "from": "Airbnb <no-reply@jobs.lever.co>",
+    "subject": "Update on your Airbnb application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Airbnb",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_124",
+    "threadId": "thread_airbnb_software_engineer",
+    "date": "2026-01-02T19:40:57.640Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Offer from Airbnb",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Airbnb",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_125",
+    "threadId": "thread_airbnb_software_engineer",
+    "date": "2026-02-02T04:35:47.800Z",
+    "from": "Airbnb <no-reply@ashbyhq.com>",
+    "subject": "Airbnb Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Airbnb",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_126",
+    "threadId": "thread_airbnb_frontend_developer",
+    "date": "2026-02-02T11:14:30.977Z",
+    "from": "Airbnb <no-reply@greenhouse.io>",
+    "subject": "Thank you for applying to Airbnb",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Airbnb. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Airbnb",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_127",
+    "threadId": "thread_airbnb_frontend_developer",
+    "date": "2026-01-04T16:32:54.433Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Interview Invitation: Frontend Developer @ Airbnb",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Airbnb",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_128",
+    "threadId": "thread_airbnb_frontend_developer",
+    "date": "2026-02-01T08:37:42.435Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Update on your Airbnb application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Airbnb",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_129",
+    "threadId": "thread_airbnb_frontend_developer",
+    "date": "2026-02-07T20:29:58.958Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Offer from Airbnb",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Airbnb",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_130",
+    "threadId": "thread_airbnb_frontend_developer",
+    "date": "2026-01-06T15:30:11.304Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Airbnb Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Airbnb",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_131",
+    "threadId": "thread_airbnb_backend_engineer",
+    "date": "2026-03-25T13:56:16.608Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Thank you for applying to Airbnb",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Airbnb. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Airbnb",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_132",
+    "threadId": "thread_airbnb_backend_engineer",
+    "date": "2026-03-18T02:18:36.806Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Interview Invitation: Backend Engineer @ Airbnb",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Airbnb",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_133",
+    "threadId": "thread_airbnb_backend_engineer",
+    "date": "2026-02-14T21:42:50.294Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Update on your Airbnb application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Airbnb",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_134",
+    "threadId": "thread_airbnb_backend_engineer",
+    "date": "2026-02-23T21:55:49.618Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Offer from Airbnb",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Airbnb",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_135",
+    "threadId": "thread_airbnb_backend_engineer",
+    "date": "2026-03-01T19:31:21.475Z",
+    "from": "Airbnb <no-reply@ashbyhq.com>",
+    "subject": "Airbnb Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Airbnb",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_136",
+    "threadId": "thread_airbnb_product_manager",
+    "date": "2026-01-05T18:07:29.776Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Thank you for applying to Airbnb",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Airbnb. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Airbnb",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_137",
+    "threadId": "thread_airbnb_product_manager",
+    "date": "2026-01-06T09:03:26.393Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Interview Invitation: Product Manager @ Airbnb",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Airbnb",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_138",
+    "threadId": "thread_airbnb_product_manager",
+    "date": "2026-03-02T14:03:54.047Z",
+    "from": "Airbnb <no-reply@jobs.lever.co>",
+    "subject": "Update on your Airbnb application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Airbnb",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_139",
+    "threadId": "thread_airbnb_product_manager",
+    "date": "2026-03-17T07:57:48.933Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Offer from Airbnb",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Airbnb",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_140",
+    "threadId": "thread_airbnb_product_manager",
+    "date": "2026-01-01T14:40:58.063Z",
+    "from": "Airbnb <no-reply@airbnb.com>",
+    "subject": "Airbnb Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Airbnb",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_141",
+    "threadId": "thread_notion_software_engineer",
+    "date": "2025-12-20T03:07:50.279Z",
+    "from": "Recruiting Team <no-reply@jobs.lever.co>",
+    "subject": "Thank you for applying to Notion",
+    "body": "Hi,\n\nThanks for applying for the Software Engineer position at Notion. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Notion",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_142",
+    "threadId": "thread_notion_software_engineer",
+    "date": "2026-01-16T21:08:25.197Z",
+    "from": "Notion <no-reply@myworkday.com>",
+    "subject": "Interview Invitation: Software Engineer @ Notion",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Notion",
+      "role": "Software Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_143",
+    "threadId": "thread_notion_software_engineer",
+    "date": "2025-12-15T00:59:49.142Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Update on your Notion application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Software Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Notion",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_144",
+    "threadId": "thread_notion_software_engineer",
+    "date": "2026-03-31T01:39:10.088Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Offer from Notion",
+    "body": "We are thrilled to offer you the Software Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Notion",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_145",
+    "threadId": "thread_notion_software_engineer",
+    "date": "2026-02-11T03:11:07.015Z",
+    "from": "Notion <no-reply@greenhouse.io>",
+    "subject": "Notion Online Assessment",
+    "body": "Please complete the coding assessment for the Software Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Notion",
+      "role": "Software Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_146",
+    "threadId": "thread_notion_frontend_developer",
+    "date": "2025-12-18T05:12:31.672Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Thank you for applying to Notion",
+    "body": "Hi,\n\nThanks for applying for the Frontend Developer position at Notion. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Notion",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_147",
+    "threadId": "thread_notion_frontend_developer",
+    "date": "2026-02-19T07:02:44.695Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Interview Invitation: Frontend Developer @ Notion",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Notion",
+      "role": "Frontend Developer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_148",
+    "threadId": "thread_notion_frontend_developer",
+    "date": "2025-12-20T06:16:55.496Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Update on your Notion application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Frontend Developer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Notion",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_149",
+    "threadId": "thread_notion_frontend_developer",
+    "date": "2026-02-14T21:52:03.976Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Offer from Notion",
+    "body": "We are thrilled to offer you the Frontend Developer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Notion",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_150",
+    "threadId": "thread_notion_frontend_developer",
+    "date": "2026-01-17T17:04:40.115Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Notion Online Assessment",
+    "body": "Please complete the coding assessment for the Frontend Developer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Notion",
+      "role": "Frontend Developer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_151",
+    "threadId": "thread_notion_backend_engineer",
+    "date": "2026-03-05T21:48:45.109Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Thank you for applying to Notion",
+    "body": "Hi,\n\nThanks for applying for the Backend Engineer position at Notion. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Notion",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_152",
+    "threadId": "thread_notion_backend_engineer",
+    "date": "2026-01-01T18:35:22.611Z",
+    "from": "Notion <no-reply@myworkday.com>",
+    "subject": "Interview Invitation: Backend Engineer @ Notion",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Notion",
+      "role": "Backend Engineer",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_153",
+    "threadId": "thread_notion_backend_engineer",
+    "date": "2026-01-02T05:44:59.130Z",
+    "from": "Notion <no-reply@jobs.lever.co>",
+    "subject": "Update on your Notion application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Backend Engineer role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Notion",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_154",
+    "threadId": "thread_notion_backend_engineer",
+    "date": "2026-01-16T01:46:51.005Z",
+    "from": "Recruiting Team <no-reply@greenhouse.io>",
+    "subject": "Offer from Notion",
+    "body": "We are thrilled to offer you the Backend Engineer position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Notion",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_155",
+    "threadId": "thread_notion_backend_engineer",
+    "date": "2026-03-30T19:38:10.267Z",
+    "from": "Recruiting Team <no-reply@ashbyhq.com>",
+    "subject": "Notion Online Assessment",
+    "body": "Please complete the coding assessment for the Backend Engineer within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Notion",
+      "role": "Backend Engineer",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_156",
+    "threadId": "thread_notion_product_manager",
+    "date": "2026-03-23T10:11:52.653Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Thank you for applying to Notion",
+    "body": "Hi,\n\nThanks for applying for the Product Manager position at Notion. Our team will review your application soon.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ACKNOWLEDGED",
+      "company": "Notion",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_157",
+    "threadId": "thread_notion_product_manager",
+    "date": "2026-01-07T10:38:26.813Z",
+    "from": "Notion <no-reply@ashbyhq.com>",
+    "subject": "Interview Invitation: Product Manager @ Notion",
+    "body": "We would love to schedule a screening call. Are you free tomorrow at 2PM? Meet securely: https://meet.google.com/abc-xyz",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Notion",
+      "role": "Product Manager",
+      "hasDate": true,
+      "hasMeeting": true
+    }
+  },
+  {
+    "id": "gen_158",
+    "threadId": "thread_notion_product_manager",
+    "date": "2026-01-28T11:28:39.716Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Update on your Notion application",
+    "body": "While your background is impressive, we will not be moving forward with your application for the Product Manager role.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Notion",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_159",
+    "threadId": "thread_notion_product_manager",
+    "date": "2026-01-13T16:07:11.059Z",
+    "from": "Notion <no-reply@notion.com>",
+    "subject": "Offer from Notion",
+    "body": "We are thrilled to offer you the Product Manager position! Attached is your compensation package.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "OFFERED",
+      "company": "Notion",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_160",
+    "threadId": "thread_notion_product_manager",
+    "date": "2026-03-13T11:06:18.747Z",
+    "from": "Notion <no-reply@myworkday.com>",
+    "subject": "Notion Online Assessment",
+    "body": "Please complete the coding assessment for the Product Manager within 48 hours.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "ASSESSMENT",
+      "company": "Notion",
+      "role": "Product Manager",
+      "hasDate": false,
+      "hasMeeting": false
+    }
+  },
+  {
+    "id": "gen_spam_161",
+    "threadId": "thread_spam_0",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_162",
+    "threadId": "thread_spam_1",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_163",
+    "threadId": "thread_spam_2",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_164",
+    "threadId": "thread_spam_3",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_165",
+    "threadId": "thread_spam_4",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_166",
+    "threadId": "thread_spam_5",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_167",
+    "threadId": "thread_spam_6",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_168",
+    "threadId": "thread_spam_7",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_169",
+    "threadId": "thread_spam_8",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_170",
+    "threadId": "thread_spam_9",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_171",
+    "threadId": "thread_spam_10",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_172",
+    "threadId": "thread_spam_11",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_173",
+    "threadId": "thread_spam_12",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_174",
+    "threadId": "thread_spam_13",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_175",
+    "threadId": "thread_spam_14",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_176",
+    "threadId": "thread_spam_15",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_177",
+    "threadId": "thread_spam_16",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_178",
+    "threadId": "thread_spam_17",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_179",
+    "threadId": "thread_spam_18",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_180",
+    "threadId": "thread_spam_19",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_181",
+    "threadId": "thread_spam_20",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_182",
+    "threadId": "thread_spam_21",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_183",
+    "threadId": "thread_spam_22",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_184",
+    "threadId": "thread_spam_23",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_185",
+    "threadId": "thread_spam_24",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_186",
+    "threadId": "thread_spam_25",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_187",
+    "threadId": "thread_spam_26",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_188",
+    "threadId": "thread_spam_27",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_189",
+    "threadId": "thread_spam_28",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_190",
+    "threadId": "thread_spam_29",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_191",
+    "threadId": "thread_spam_30",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_192",
+    "threadId": "thread_spam_31",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_193",
+    "threadId": "thread_spam_32",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_194",
+    "threadId": "thread_spam_33",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_195",
+    "threadId": "thread_spam_34",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_196",
+    "threadId": "thread_spam_35",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_197",
+    "threadId": "thread_spam_36",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <jobalerts@linkedin.com>",
+    "subject": "15 new jobs matching your profile",
+    "body": "Checkout these roles:",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_198",
+    "threadId": "thread_spam_37",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <recruiter@randomagency.com>",
+    "subject": "Great opportunity for you!",
+    "body": "I saw your LinkedIn. Are you looking for new roles?",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_199",
+    "threadId": "thread_spam_38",
+    "date": "2026-04-02T15:41:23.918Z",
+    "from": "Spammer <newsletter@hired.com>",
+    "subject": "Top skills for 2026",
+    "body": "Read our latest blog post on what engineers need to know.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_spam_200",
+    "threadId": "thread_spam_39",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Spammer <careers@resume.io>",
+    "subject": "Fix your resume",
+    "body": "Buy our template to pass ATS.",
+    "expected": {
+      "shouldSendToAI": false,
+      "isSpam": true
+    }
+  },
+  {
+    "id": "gen_edge_201",
+    "threadId": "thread_edge_0",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_202",
+    "threadId": "thread_edge_1",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_203",
+    "threadId": "thread_edge_2",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@google.com>",
+    "subject": "Re: Interview Invitation",
+    "body": "Sorry, I need to reschedule our chat to Thursday at 4 PM.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "hasMeeting": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "gen_edge_204",
+    "threadId": "thread_edge_3",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <system@myworkday.com>",
+    "subject": "Task deadline passed",
+    "body": "This is an automated notification that the deadline for your Spotify assessment has passed.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_205",
+    "threadId": "thread_edge_4",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_206",
+    "threadId": "thread_edge_5",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_207",
+    "threadId": "thread_edge_6",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@google.com>",
+    "subject": "Re: Interview Invitation",
+    "body": "Sorry, I need to reschedule our chat to Thursday at 4 PM.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "hasMeeting": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "gen_edge_208",
+    "threadId": "thread_edge_7",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <system@myworkday.com>",
+    "subject": "Task deadline passed",
+    "body": "This is an automated notification that the deadline for your Spotify assessment has passed.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_209",
+    "threadId": "thread_edge_8",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_210",
+    "threadId": "thread_edge_9",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_211",
+    "threadId": "thread_edge_10",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@google.com>",
+    "subject": "Re: Interview Invitation",
+    "body": "Sorry, I need to reschedule our chat to Thursday at 4 PM.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "hasMeeting": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "gen_edge_212",
+    "threadId": "thread_edge_11",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <system@myworkday.com>",
+    "subject": "Task deadline passed",
+    "body": "This is an automated notification that the deadline for your Spotify assessment has passed.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_213",
+    "threadId": "thread_edge_12",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_214",
+    "threadId": "thread_edge_13",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_215",
+    "threadId": "thread_edge_14",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@google.com>",
+    "subject": "Re: Interview Invitation",
+    "body": "Sorry, I need to reschedule our chat to Thursday at 4 PM.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "hasMeeting": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "gen_edge_216",
+    "threadId": "thread_edge_15",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <system@myworkday.com>",
+    "subject": "Task deadline passed",
+    "body": "This is an automated notification that the deadline for your Spotify assessment has passed.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_217",
+    "threadId": "thread_edge_16",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_218",
+    "threadId": "thread_edge_17",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_219",
+    "threadId": "thread_edge_18",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@google.com>",
+    "subject": "Re: Interview Invitation",
+    "body": "Sorry, I need to reschedule our chat to Thursday at 4 PM.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "hasMeeting": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "gen_edge_220",
+    "threadId": "thread_edge_19",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <system@myworkday.com>",
+    "subject": "Task deadline passed",
+    "body": "This is an automated notification that the deadline for your Spotify assessment has passed.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_221",
+    "threadId": "thread_edge_20",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_222",
+    "threadId": "thread_edge_21",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_223",
+    "threadId": "thread_edge_22",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@google.com>",
+    "subject": "Re: Interview Invitation",
+    "body": "Sorry, I need to reschedule our chat to Thursday at 4 PM.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "hasMeeting": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "gen_edge_224",
+    "threadId": "thread_edge_23",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <system@myworkday.com>",
+    "subject": "Task deadline passed",
+    "body": "This is an automated notification that the deadline for your Spotify assessment has passed.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_225",
+    "threadId": "thread_edge_24",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_226",
+    "threadId": "thread_edge_25",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_227",
+    "threadId": "thread_edge_26",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@google.com>",
+    "subject": "Re: Interview Invitation",
+    "body": "Sorry, I need to reschedule our chat to Thursday at 4 PM.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Google",
+      "hasMeeting": false,
+      "isReschedule": true
+    }
+  },
+  {
+    "id": "gen_edge_228",
+    "threadId": "thread_edge_27",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <system@myworkday.com>",
+    "subject": "Task deadline passed",
+    "body": "This is an automated notification that the deadline for your Spotify assessment has passed.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "REJECTED",
+      "company": "Spotify",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_229",
+    "threadId": "thread_edge_28",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <recruiting@stripe.com>",
+    "subject": "Next steps for Frontend Engineer",
+    "body": "We are moving you to the System Design Round. Let me know when you are free.",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Stripe",
+      "hasMeeting": false,
+      "isReschedule": false
+    }
+  },
+  {
+    "id": "gen_edge_230",
+    "threadId": "thread_edge_29",
+    "date": "2026-04-02T15:41:23.919Z",
+    "from": "Internal Recruiter <no-reply@greenhouse.io>",
+    "subject": "Your schedule for tomorrow",
+    "body": "Interview reminder for your Meta loop at 10 AM. Link: https://zoom.us/j/12345",
+    "expected": {
+      "shouldSendToAI": true,
+      "isSpam": false,
+      "status": "INTERVIEWING",
+      "company": "Meta",
+      "hasMeeting": true,
+      "isReschedule": false
+    }
+  }
+]

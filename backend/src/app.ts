@@ -6,8 +6,10 @@ import authRoutes from './routes/auth';
 import applicationRoutes from './routes/applications';
 import resumeRoutes from './routes/resumes';
 import coverLetterRoutes from './routes/coverLetters';
-import analyticsRoutes from './routes/analytics';
-import { errorHandler } from './middleware/errorHandler';
+import analyticsRoutes from './routes/analytics.js';
+import adminRoutes from './routes/admin.js';
+import insightsRoutes from './routes/insights.js';
+import { errorHandler } from './middleware/errorHandler.js';
 
 dotenv.config();
 
@@ -49,6 +51,8 @@ app.use('/api/applications', applicationRoutes);
 app.use('/api/resumes', resumeRoutes);
 app.use('/api/cover-letters', coverLetterRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/insights', insightsRoutes);
 
 // Error handling
 app.use(errorHandler);

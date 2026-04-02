@@ -20,6 +20,11 @@ model User {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
+  // v2: Learning Memory Defaults
+  ignoredSenders String[] @default([])
+  trustedSenders String[] @default([])
+  companyAliases Json?    // Maps {"Wrong Company": "Correct Target"}
+
   gmailToken    GmailToken?
   applications  Application[]
   resumes       Resume[]
@@ -41,28 +46,43 @@ model GmailToken {
 }
 
 model Application {
-  id          String            @id @default(cuid())
-  userId      String
-  company     String
-  role        String
-  status      ApplicationStatus @default(APPLIED)
-  platform    String?
-  appliedAt   DateTime          @default(now())
-  updatedAt   DateTime          @updatedAt
-  interviewAt DateTime?
-  notes       String?
-  salary      String?
-  location    String?
-  url         String?
-  emailId     String?
+  id              String            @id @default(cuid())
+  userId          String
+  company         String
+  role            String
+  status          ApplicationStatus @default(APPLIED)
+  platform        String?
+  appliedAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  interviewAt     DateTime?
+  notes           String?
+  salary          String?
+  location        String?
+  url             String?
+  emailId         String?
   calendarEventId String?
+
+  // v2: Application Identity Resolution
+  applicationKey  String?           // Stable key: hash(company+role+userId) for dedup
+  threadId        String?           // Gmail thread ID for conversation grouping
+
+  // v2: Confidence Tracking
+  confidence      Float?            // Combined confidence score (0.0-1.0)
+  needsReview     Boolean           @default(false) // Flag for medium-confidence matches
+
+  // v2: Rich Event Data
+  meetingLink     String?           // Zoom/Teams/Meet link extracted from email
+  deadline        DateTime?         // Assessment/task deadline (distinct from interviewAt)
 
   user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
   coverLetters CoverLetter[]
   rounds       InterviewRound[]
+  emailLogs    EmailLog[]
 
+  @@unique([userId, applicationKey]) // Enforce one card per application
   @@index([userId])
   @@index([status])
+  @@index([applicationKey])
 }
 
 model InterviewRound {
@@ -70,8 +90,10 @@ model InterviewRound {
   applicationId   String
   roundName       String   // e.g. "Technical Round 1", "HR Round"
   scheduledAt     DateTime
-  status          String   @default("SCHEDULED") // SCHEDULED, COMPLETED, CANCELLED
+  status          String   @default("SCHEDULED") // SCHEDULED, COMPLETED, CANCELLED, RESCHEDULED
   calendarEventId String?
+  meetingLink     String?  // Zoom/Teams/Meet link
+  deadline        DateTime? // For assessments: deadline to complete
   notes           String?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
@@ -85,8 +107,10 @@ model InterviewRound {
 
 enum ApplicationStatus {
   APPLIED
-  VIEWED
-  INTERVIEWING
+  ACKNOWLEDGED     // "We received your application"
+  UNDER_REVIEW     // "Your application is being reviewed"
+  ASSESSMENT       // OA/Coding test pending
+  INTERVIEWING     // Interview scheduled / in progress
   OFFERED
   REJECTED
   WITHDRAWN
@@ -134,16 +158,59 @@ enum CoverLetterTone {
 }
 
 model EmailLog {
-  id          String   @id @default(cuid())
-  userId      String
-  gmailId     String   @unique
-  subject     String
-  from        String
-  receivedAt  DateTime
-  processed   Boolean  @default(false)
-  parsedData  Json?
-  createdAt   DateTime @default(now())
+  id            String       @id @default(cuid())
+  userId        String
+  gmailId       String       @unique
+  threadId      String?      // Gmail thread ID for conversation grouping
+  applicationId String?      // Link to resolved application
+  subject       String
+  from          String
+  receivedAt    DateTime
+  processed     Boolean      @default(false)
+  parsedData    Json?
+  confidence    Float?       // Combined confidence score
+  pipelineStage String?      // SKIPPED, SCRIPT_ONLY, AI_VERIFIED
+  // v2: Sync Run & Audit Logging
+  syncRunId     String?
+  syncRun       SyncRun?      @relation(fields: [syncRunId], references: [id], onDelete: SetNull)
+  reason        String?       // Debug explanation for why an action occurred
+  actionTaken   String?       // 'CREATED', 'UPDATED', 'IGNORED', 'MERGED'
+
+  createdAt     DateTime     @default(now())
+
+  application Application? @relation(fields: [applicationId], references: [id], onDelete: SetNull)
 
   @@index([userId])
   @@index([processed])
+  @@index([threadId])
+  @@index([applicationId])
+}
+
+model SyncRun {
+  id                  String     @id @default(cuid())
+  userId              String
+  startedAt           DateTime   @default(now())
+  completedAt         DateTime?
+  status              SyncStatus @default(IN_PROGRESS)
+  
+  // Metrics
+  totalScanned        Int        @default(0)
+  totalIgnored        Int        @default(0)
+  totalSentToAI       Int        @default(0)
+  totalMerged         Int        @default(0)
+  totalCreated        Int        @default(0)
+  totalUpdated        Int        @default(0)
+  totalFlagged        Int        @default(0)
+  totalErrors         Int        @default(0)
+
+  // Relations
+  emailLogs           EmailLog[]
+
+  @@index([userId])
+}
+
+enum SyncStatus {
+  IN_PROGRESS
+  COMPLETED
+  FAILED
 }

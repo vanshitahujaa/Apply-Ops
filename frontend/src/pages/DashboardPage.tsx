@@ -8,6 +8,8 @@ import { useApplicationStore, useAuthStore } from '@/store'
 import type { Application, ApplicationStatus, User } from '@/lib/types'
 import { formatRelativeTime } from '@/lib/utils'
 import api, { applicationsApi, authApi } from '@/services/api'
+import ApplicationTimeline from '@/components/ApplicationTimeline'
+import { CommandCenter } from '@/components/dashboard/CommandCenter'
 import { toast } from 'sonner'
 import {
   Plus,
@@ -32,12 +34,15 @@ import {
   RefreshCw,
   ExternalLink,
   Edit3,
-  Trash2
+  Trash2,
+  AlertTriangle
 } from 'lucide-react'
 
 const statusConfig: Record<ApplicationStatus, { label: string; variant: 'default' | 'secondary' | 'success' | 'warning' | 'danger'; icon: typeof Briefcase }> = {
   applied: { label: 'Applied', variant: 'default', icon: Briefcase },
-  viewed: { label: 'Viewed', variant: 'secondary', icon: Clock },
+  acknowledged: { label: 'Acknowledged', variant: 'secondary', icon: Clock },
+  under_review: { label: 'Under Review', variant: 'secondary', icon: Clock },
+  assessment: { label: 'Assessment', variant: 'warning', icon: Target },
   interviewing: { label: 'Interviewing', variant: 'warning', icon: Calendar },
   offered: { label: 'Offered', variant: 'success', icon: CheckCircle },
   rejected: { label: 'Rejected', variant: 'danger', icon: XCircle },
@@ -56,6 +61,31 @@ export default function DashboardPage() {
 
   const [isSyncing, setIsSyncing] = useState(false)
   const [isEditingInterview, setIsEditingInterview] = useState(false)
+  
+  const handleReviewAction = async (action: 'CONFIRM' | 'WRONG_MATCH' | 'IGNORE_SENDER') => {
+    if (!selectedApplication) return
+    try {
+      if (action === 'IGNORE_SENDER') {
+        await api.put(`/applications/${selectedApplication.id}/review`, { action })
+        toast.success('Sender ignored and application removed')
+        setSelectedApplication(null)
+      } else if (action === 'WRONG_MATCH') {
+        toast.info('Marked as mismatch. An administrator logic will split this later.')
+        // In full impl, this splits the email logs
+      } else if (action === 'CONFIRM') {
+        const { data } = await api.put(`/applications/${selectedApplication.id}/review`, { 
+            action,
+            company: selectedApplication.company,
+            role: selectedApplication.role
+        })
+        setSelectedApplication(data.data)
+        toast.success('Application verified')
+      }
+      fetchApplications()
+    } catch (error) {
+      toast.error('Failed to submit review')
+    }
+  }
   const [editInterviewDate, setEditInterviewDate] = useState('')
 
   // Add Application Modal State
@@ -256,6 +286,10 @@ export default function DashboardPage() {
       {/* Main Content */}
       <main className="lg:ml-64 pt-14 lg:pt-0 min-h-screen">
         <div className="p-4 sm:p-6 lg:p-8 max-w-5xl mx-auto">
+          
+          {/* Action Queue / Cockpit */}
+          <CommandCenter />
+
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <div>
@@ -356,7 +390,9 @@ export default function DashboardPage() {
             >
               <option value="all">All Status</option>
               <option value="applied">Applied</option>
-              <option value="viewed">Viewed</option>
+              <option value="acknowledged">Acknowledged</option>
+              <option value="under_review">Under Review</option>
+              <option value="assessment">Assessment</option>
               <option value="interviewing">Interviewing</option>
               <option value="offered">Offered</option>
               <option value="rejected">Rejected</option>
@@ -390,6 +426,12 @@ export default function DashboardPage() {
                             <StatusIcon className="w-3 h-3 mr-1" />
                             {status.label}
                           </Badge>
+                          {application.needsReview && (
+                            <Badge variant="warning" className="animate-pulse bg-amber-500/20 text-amber-300 border-amber-500/30">
+                              <AlertTriangle className="w-3 h-3 mr-1" />
+                              Review Needed
+                            </Badge>
+                          )}
                         </div>
                         <p className="text-sm text-zinc-400 truncate">{application.role}</p>
 
@@ -484,7 +526,9 @@ export default function DashboardPage() {
                     className="w-full h-8 px-2 rounded-lg bg-zinc-700 border border-zinc-600 text-sm text-white focus:outline-none focus:ring-2 focus:ring-violet-500 cursor-pointer"
                   >
                     <option value="applied">Applied</option>
-                    <option value="viewed">Viewed</option>
+                    <option value="acknowledged">Acknowledged</option>
+                    <option value="under_review">Under Review</option>
+                    <option value="assessment">Assessment</option>
                     <option value="interviewing">Interviewing</option>
                     <option value="offered">Offered</option>
                     <option value="rejected">Rejected</option>
@@ -551,25 +595,30 @@ export default function DashboardPage() {
                   </Button>
                 )}
 
-                {/* Interview Rounds Timeline */}
-                {selectedApplication.rounds && selectedApplication.rounds.length > 0 && (
-                  <div className="pt-4 border-t border-zinc-800">
-                    <h4 className="text-sm font-semibold text-white mb-3">Interview Progression</h4>
-                    <div className="relative space-y-4 pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-px before:bg-zinc-800">
-                      {selectedApplication.rounds.map((round) => (
-                        <div key={round.id} className="relative">
-                          <div className="absolute -left-4 top-1.5 w-3 h-3 rounded-full bg-violet-500 ring-4 ring-zinc-900" />
-                          <div>
-                            <p className="text-sm font-medium text-white">{round.roundName}</p>
-                            <p className="text-xs text-zinc-400">
-                              {new Date(round.scheduledAt).toLocaleString(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}
-                            </p>
-                            {round.notes && (
-                              <p className="text-xs text-zinc-500 mt-1 italic">"{round.notes}"</p>
-                            )}
-                          </div>
-                        </div>
-                      ))}
+                {/* Interview Rounds Timeline Component */}
+                <ApplicationTimeline application={selectedApplication} />
+                
+                {selectedApplication.needsReview && (
+                  <div className="pt-4 border-t border-zinc-800 space-y-3">
+                    <div className="p-4 rounded-xl border border-amber-500/20 bg-amber-500/10">
+                      <div className="flex items-center gap-2 mb-2">
+                        <AlertTriangle className="w-4 h-4 text-amber-500" />
+                        <h4 className="text-sm font-semibold text-amber-500">Needs Your Review</h4>
+                      </div>
+                      <p className="text-xs text-amber-400/80 mb-4">
+                        This application was auto-merged with medium confidence. Please confirm the details are correct.
+                      </p>
+                      <div className="flex flex-wrap gap-2 text-sm">
+                        <Button variant="solid" className="w-full sm:w-auto bg-violet-600 hover:bg-violet-500 text-white" onClick={() => handleReviewAction('CONFIRM')}>
+                          Looks Good
+                        </Button>
+                        <Button variant="outline" className="w-full sm:w-auto text-zinc-300 border-zinc-600 hover:bg-zinc-800" onClick={() => handleReviewAction('WRONG_MATCH')}>
+                          Wrong Match
+                        </Button>
+                        <Button variant="outline" className="w-full sm:w-auto text-red-400 border-red-500/20 hover:bg-red-500/10" onClick={() => handleReviewAction('IGNORE_SENDER')}>
+                          Ignore Sender
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 )}

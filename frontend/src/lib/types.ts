@@ -2,7 +2,9 @@
 
 export type ApplicationStatus =
     | 'applied'
-    | 'viewed'
+    | 'acknowledged'
+    | 'under_review'
+    | 'assessment'
     | 'interviewing'
     | 'offered'
     | 'rejected'
@@ -22,15 +24,26 @@ export interface Application {
     location?: string
     url?: string
     rounds?: InterviewRound[]
+
+    // v2: Identity & Confidence
+    applicationKey?: string
+    confidence?: number
+    needsReview?: boolean
+
+    // v2: Rich Event Data
+    meetingLink?: string
+    deadline?: string
 }
 
 export interface InterviewRound {
     id: string
     roundName: string
     scheduledAt: string
-    status: 'SCHEDULED' | 'COMPLETED' | 'CANCELLED'
+    status: 'SCHEDULED' | 'COMPLETED' | 'CANCELLED' | 'RESCHEDULED'
     notes?: string
     calendarEventId?: string
+    meetingLink?: string
+    deadline?: string
 }
 
 export interface User {

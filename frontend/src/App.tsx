@@ -13,6 +13,7 @@ import ResumesPage from '@/pages/ResumesPage'
 import CoverLetterPage from '@/pages/CoverLetterPage'
 import SettingsPage from '@/pages/SettingsPage'
 import AuthCallbackPage from '@/pages/AuthCallbackPage'
+import AdminDebugPage from '@/pages/AdminDebugPage'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -138,6 +139,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <SettingsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminDebugPage />
               </ProtectedRoute>
             }
           />
